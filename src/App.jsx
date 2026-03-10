@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router basename="/ScaleUp-Co">
+    <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
