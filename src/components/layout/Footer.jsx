@@ -19,7 +19,7 @@ const Footer = () => {
                             <a href="#" className="h-10 w-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#00E1FF] hover:border-[#00E1FF] transition-colors">
                                 <Twitter size={18} />
                             </a>
-                            <a href="#" className="h-10 w-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#00E1FF] hover:border-[#00E1FF] transition-colors">
+                            <a href="https://www.linkedin.com/company/scaleupco" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#00E1FF] hover:border-[#00E1FF] transition-colors">
                                 <Linkedin size={18} />
                             </a>
                             <a href="#" className="h-10 w-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#00E1FF] hover:border-[#00E1FF] transition-colors">

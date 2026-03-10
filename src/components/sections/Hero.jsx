@@ -15,7 +15,7 @@ const Hero = () => {
                 {/* Subtle grid pattern */}
                 <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
-                {/* Animated Premium Glow */}
+                {/* Animated Premium Glow - Desktop Only */}
                 <motion.div
                     animate={{
                         x: [0, 50, 0, -50, 0],
@@ -27,13 +27,16 @@ const Hero = () => {
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="absolute inset-0 z-0 mix-blend-screen"
+                    className="absolute inset-0 z-0 mix-blend-screen hidden md:block"
                     style={{ background: 'radial-gradient(circle at 30% 50%, rgba(56,189,248,0.15), transparent 60%)' }}
                 />
 
-                {/* Glow Effects */}
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00E1FF] rounded-full filter blur-[150px] opacity-10 blur-xl animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-600 rounded-full filter blur-[150px] opacity-10"></div>
+                {/* Mobile lightweight fallback glow */}
+                <div className="absolute inset-0 z-0 md:hidden" style={{ background: 'radial-gradient(circle at 50% 20%, rgba(56,189,248,0.08), transparent 70%)' }}></div>
+
+                {/* Glow Effects - Desktop Only */}
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00E1FF] rounded-full filter blur-[100px] opacity-10 blur-xl animate-pulse hidden md:block"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-600 rounded-full filter blur-[100px] opacity-10 hidden md:block"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-20">

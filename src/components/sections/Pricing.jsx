@@ -58,7 +58,7 @@ const Pricing = () => {
     return (
         <section className="py-24 bg-dark-bg border-t border-gray-800 relative z-0 relative">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-[-1]">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px]"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] hidden md:block"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
