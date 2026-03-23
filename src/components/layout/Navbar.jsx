@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from '../ui/Button';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,11 +22,11 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-dark-bg/70 backdrop-blur-md border-b border-gray-800/50 shadow-lg py-4' : 'bg-transparent py-6'}`}>
+        <nav style={{ background: 'rgba(6,8,16,0.85)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(255,255,255,0.04)' }} className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-bold tracking-tight">
-                    ScaleUp<span className="text-[#00E1FF]"> Co.</span>
+                    ScaleUp<span className="text-[#3b82f6]"> Co.</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -37,7 +36,7 @@ const Navbar = () => {
                             key={link.name}
                             to={link.path}
                             className={({ isActive }) =>
-                                `text-sm font-medium transition-colors hover:text-[#00E1FF] ${isActive ? 'text-[#00E1FF]' : 'text-gray-300'}`
+                                `text-sm font-medium transition-colors hover:text-white ${isActive ? 'text-white' : 'text-[#94a3b8]'}`
                             }
                         >
                             {link.name}
@@ -48,13 +47,15 @@ const Navbar = () => {
                 {/* CTA */}
                 <div className="hidden md:block">
                     <Link to="/contact">
-                        <Button variant="primary" size="sm">Get Started</Button>
+                        <button style={{ background: '#2563eb', borderRadius: '6px' }} className="text-sm font-semibold text-white px-5 py-2.5 hover:bg-[#3b82f6] transition-colors">
+                            Get Started
+                        </button>
                     </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-gray-300 hover:text-white"
+                    className="md:hidden text-[#94a3b8] hover:text-white"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,22 +64,24 @@ const Navbar = () => {
 
             {/* Mobile Nav */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-dark-bg border-b border-gray-800 p-6 flex flex-col space-y-4 shadow-xl">
+                <div style={{ background: '#060810', borderBottom: '1px solid rgba(59,130,246,0.12)' }} className="md:hidden absolute top-full left-0 right-0 p-6 flex flex-col space-y-4 shadow-xl">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.name}
                             to={link.path}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={({ isActive }) =>
-                                `text-lg font-medium transition-colors ${isActive ? 'text-[#00E1FF]' : 'text-gray-300'}`
+                                `text-lg font-medium transition-colors ${isActive ? 'text-white' : 'text-[#94a3b8]'}`
                             }
                         >
                             {link.name}
                         </NavLink>
                     ))}
-                    <div className="pt-4 mt-2 border-t border-gray-800">
+                    <div className="pt-4 mt-2" style={{ borderTop: '1px solid rgba(59,130,246,0.12)' }}>
                         <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                            <Button variant="primary" className="w-full">Get Started</Button>
+                            <button style={{ background: '#2563eb', borderRadius: '6px' }} className="w-full text-sm font-semibold text-white py-3 hover:bg-[#3b82f6] transition-colors">
+                                Get Started
+                            </button>
                         </Link>
                     </div>
                 </div>
