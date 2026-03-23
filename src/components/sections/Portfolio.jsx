@@ -66,11 +66,6 @@ const Portfolio = () => {
                                     alt={project.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute top-4 left-4 z-20">
-                                    <span className="bg-dark-bg/80 backdrop-blur-md text-white text-xs font-medium px-3 py-1 rounded-full border border-gray-700">
-                                        {project.category}
-                                    </span>
-                                </div>
                             </div>
 
                             <div className="p-8 flex flex-col flex-grow relative">
