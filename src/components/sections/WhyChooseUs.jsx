@@ -4,12 +4,12 @@ import { Monitor, Target, Zap, Settings, PieChart, MapPin } from 'lucide-react';
 
 const WhyChooseUs = () => {
     const benefits = [
-        { icon: <Monitor className="w-4 h-4 text-[#3b82f6]" />, title: "Premium Design Quality", description: "First impressions matter. We out-design your competitors." },
-        { icon: <Target className="w-4 h-4 text-[#3b82f6]" />, title: "Conversion-Focused", description: "Every pixel is optimized to turn visitors into leads." },
-        { icon: <Zap className="w-4 h-4 text-[#3b82f6]" />, title: "Lightning Fast Delivery", description: "Launch your new growth system in weeks, not months." },
-        { icon: <Settings className="w-4 h-4 text-[#3b82f6]" />, title: "Flexible Packages", description: "Pricing that scales with your business growth stage." },
-        { icon: <PieChart className="w-4 h-4 text-[#3b82f6]" />, title: "Ongoing Support", description: "We monitor, maintain, and improve your site post-launch." },
-        { icon: <MapPin className="w-4 h-4 text-[#3b82f6]" />, title: "Local Market Expertise", description: "Proven strategies for local business dominance." }
+        { icon: <Monitor size={20} color="#3b82f6" />, title: "Premium Design Quality", description: "First impressions matter. We out-design your competitors." },
+        { icon: <Target size={20} color="#3b82f6" />, title: "Conversion-Focused", description: "Every pixel is optimized to turn visitors into leads." },
+        { icon: <Zap size={20} color="#3b82f6" />, title: "Lightning Fast Delivery", description: "Launch your new growth system in weeks, not months." },
+        { icon: <Settings size={20} color="#3b82f6" />, title: "Flexible Packages", description: "Pricing that scales with your business growth stage." },
+        { icon: <PieChart size={20} color="#3b82f6" />, title: "Ongoing Support", description: "We monitor, maintain, and improve your site post-launch." },
+        { icon: <MapPin size={20} color="#3b82f6" />, title: "Local Market Expertise", description: "Proven strategies for local business dominance." }
     ];
 
     const metrics = [
@@ -20,8 +20,8 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section style={{ background: '#060810', borderTop: '1px solid rgba(59,130,246,0.08)' }} className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
+        <section style={{ background: '#060810', borderTop: '1px solid rgba(59,130,246,0.08)', padding: '7rem 0' }}>
+            <div className="max-w-7xl mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                     <motion.div
@@ -40,7 +40,8 @@ const WhyChooseUs = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             {benefits.map((benefit, index) => (
                                 <div key={index} className="flex items-start gap-3">
-                                    <div className="w-8 h-8 rounded-md flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+                                    {/* 40x40 icon box with 20px icon */}
+                                    <div className="w-10 h-10 rounded-md flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.25)', minWidth: '40px', minHeight: '40px' }}>
                                         {benefit.icon}
                                     </div>
                                     <div>

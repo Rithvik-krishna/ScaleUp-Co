@@ -3,31 +3,15 @@ import { motion } from 'framer-motion';
 
 const Process = () => {
     const steps = [
-        {
-            number: "01",
-            title: "Discovery",
-            description: "We understand your business goals, audience, and growth opportunities."
-        },
-        {
-            number: "02",
-            title: "Strategy",
-            description: "We design a conversion-focused website structure tailored to your niche."
-        },
-        {
-            number: "03",
-            title: "Build",
-            description: "We develop your high-performance growth website using modern tech."
-        },
-        {
-            number: "04",
-            title: "Launch & Scale",
-            description: "SEO optimization and lead systems go live to drive revenue."
-        }
+        { number: "01", title: "Discovery", description: "We understand your business goals, audience, and growth opportunities." },
+        { number: "02", title: "Strategy", description: "We design a conversion-focused website structure tailored to your niche." },
+        { number: "03", title: "Build", description: "We develop your high-performance growth website using modern tech." },
+        { number: "04", title: "Launch & Scale", description: "SEO optimization and lead systems go live to drive revenue." }
     ];
 
     return (
-        <section style={{ background: '#0f1526', borderTop: '1px solid rgba(59,130,246,0.08)' }} className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
+        <section style={{ background: '#0f1526', borderTop: '1px solid rgba(59,130,246,0.08)', padding: '7rem 0' }}>
+            <div className="max-w-7xl mx-auto px-6 md:px-20">
 
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.h2
@@ -50,10 +34,10 @@ const Process = () => {
                 </div>
 
                 <div className="relative">
-                    {/* Horizontal connector line */}
-                    <div className="hidden lg:block absolute top-[40px] left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] h-px z-0" style={{ background: 'rgba(59,130,246,0.2)' }}></div>
+                    {/* Dashed connector line at circle height */}
+                    <div className="hidden lg:block absolute top-[40px] left-[calc(12.5%+32px)] right-[calc(12.5%+32px)] z-0" style={{ borderTop: '1px dashed rgba(59,130,246,0.3)' }}></div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
@@ -61,10 +45,9 @@ const Process = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.15 + 0.2 }}
-                                className="flex flex-col items-center text-center group card-hover-premium rounded-2xl p-6"
-                                style={{ background: '#0b0f1c', border: '1px solid rgba(59,130,246,0.12)' }}
+                                className="flex flex-col items-center text-center group"
                             >
-                                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-8 relative z-10 group-hover:border-[rgba(59,130,246,0.5)] transition-all duration-300" style={{ background: '#0b0f1c', border: '1px solid rgba(59,130,246,0.22)' }}>
+                                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-8 relative z-10 group-hover:scale-110 transition-all duration-300" style={{ background: '#0b0f1c', border: '1px solid rgba(59,130,246,0.22)' }}>
                                     <span className="font-mono text-xl font-extrabold text-[#3b82f6]">{step.number}</span>
                                 </div>
 

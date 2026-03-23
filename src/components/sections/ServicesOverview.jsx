@@ -1,7 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Laptop, Search, MessageSquarePlus, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const ServiceCard = ({ service, index }) => {
+    const [hovered, setHovered] = useState(false);
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="rounded-2xl p-8 relative overflow-hidden flex flex-col"
+            style={{
+                background: '#060810',
+                border: '1px solid rgba(59,130,246,0.12)',
+                transition: 'transform 0.3s ease, border-color 0.3s ease',
+                transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+                borderColor: hovered ? 'rgba(59,130,246,0.35)' : 'rgba(59,130,246,0.12)'
+            }}
+        >
+            {/* Top gradient border line on hover */}
+            <div style={{
+                position: 'absolute',
+                top: 0, left: 0, right: 0,
+                height: '2px',
+                background: 'linear-gradient(90deg, #2563eb, #0ea5e9)',
+                opacity: hovered ? 1 : 0,
+                transition: 'opacity 0.3s ease'
+            }}></div>
+
+            <div className="mb-6 w-16 h-16 rounded-xl flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+                {service.icon}
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+            <p className="text-[#94a3b8] mb-8 min-h-[100px]">
+                {service.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mt-auto">
+                {service.features.map((feature, fIndex) => (
+                    <span key={fIndex} className="text-xs font-semibold px-3 py-1.5 rounded-md" style={{ background: 'rgba(37,99,235,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+                        {feature}
+                    </span>
+                ))}
+            </div>
+        </motion.div>
+    );
+};
 
 const ServicesOverview = () => {
     const services = [
@@ -26,8 +76,8 @@ const ServicesOverview = () => {
     ];
 
     return (
-        <section style={{ background: '#060810' }} className="py-24 relative">
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <section style={{ background: '#060810', padding: '7rem 0' }}>
+            <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                     <div className="max-w-2xl">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
@@ -44,38 +94,7 @@ const ServicesOverview = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="rounded-2xl p-8 group relative overflow-hidden card-hover-premium"
-                            style={{
-                                background: '#060810',
-                                border: '1px solid rgba(59,130,246,0.12)',
-                            }}
-                        >
-                            {/* Top border on hover */}
-                            <div className="absolute top-0 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" style={{ background: 'linear-gradient(90deg, #2563eb, #0ea5e9)' }}></div>
-
-                            <div className="mb-6 w-16 h-16 rounded-xl flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
-                                {service.icon}
-                            </div>
-
-                            <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-                            <p className="text-[#94a3b8] mb-8 min-h-[100px]">
-                                {service.description}
-                            </p>
-
-                            <div className="flex flex-wrap gap-2 mt-auto">
-                                {service.features.map((feature, fIndex) => (
-                                    <span key={fIndex} className="text-xs font-semibold px-3 py-1.5 rounded-md" style={{ background: 'rgba(37,99,235,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
-                                        {feature}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
+                        <ServiceCard key={index} service={service} index={index} />
                     ))}
                 </div>
 

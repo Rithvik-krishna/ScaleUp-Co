@@ -33,7 +33,7 @@ const StatCard = ({ icon, stat, label, badge, badgeColor, delay }) => (
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden" style={{ background: '#060810' }}>
+        <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: '#060810' }}>
             {/* Dot grid background */}
             <div className="absolute inset-0" style={{
                 backgroundImage: 'linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)',
@@ -44,7 +44,7 @@ const Hero = () => {
                 background: 'radial-gradient(ellipse 80% 60% at 70% 40%, rgba(37,99,235,0.08) 0%, transparent 70%)'
             }}></div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-20">
+            <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10 w-full" style={{ paddingTop: '7rem', paddingBottom: '5rem' }}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                     <motion.div
@@ -106,32 +106,37 @@ const Hero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Stat Cards */}
-                    <div className="hidden lg:flex flex-col gap-4 max-w-sm ml-auto">
-                        <StatCard
-                            icon={<TrendingUp className="w-6 h-6 text-[#3b82f6]" />}
-                            stat="+342%"
-                            label="Average revenue growth"
-                            badge="↑ YOY"
-                            badgeColor="rgba(34,197,94,0.8)"
-                            delay={0.3}
-                        />
-                        <StatCard
-                            icon={<Globe className="w-6 h-6 text-[#3b82f6]" />}
-                            stat="500+"
-                            label="Websites delivered"
-                            badge="Active"
-                            badgeColor="rgba(37,99,235,0.85)"
-                            delay={0.45}
-                        />
-                        <StatCard
-                            icon={<Star className="w-6 h-6 text-[#3b82f6]" />}
-                            stat="4.9★"
-                            label="Average client rating"
-                            badge="Verified"
-                            badgeColor="rgba(100,116,139,0.85)"
-                            delay={0.6}
-                        />
+                    {/* Divider line + Stat Cards */}
+                    <div className="hidden lg:flex items-stretch gap-8">
+                        {/* Vertical blue line */}
+                        <div className="self-stretch w-px" style={{ background: 'rgba(59,130,246,0.2)', minHeight: '280px' }}></div>
+
+                        <div className="flex flex-col gap-4 max-w-sm flex-1">
+                            <StatCard
+                                icon={<TrendingUp className="w-6 h-6 text-[#3b82f6]" />}
+                                stat="+342%"
+                                label="Average revenue growth"
+                                badge="↑ YOY"
+                                badgeColor="rgba(34,197,94,0.8)"
+                                delay={0.3}
+                            />
+                            <StatCard
+                                icon={<Globe className="w-6 h-6 text-[#3b82f6]" />}
+                                stat="500+"
+                                label="Websites delivered"
+                                badge="Active"
+                                badgeColor="rgba(37,99,235,0.85)"
+                                delay={0.45}
+                            />
+                            <StatCard
+                                icon={<Star className="w-6 h-6 text-[#3b82f6]" />}
+                                stat="4.9★"
+                                label="Average client rating"
+                                badge="Verified"
+                                badgeColor="rgba(100,116,139,0.85)"
+                                delay={0.6}
+                            />
+                        </div>
                     </div>
 
                 </div>
