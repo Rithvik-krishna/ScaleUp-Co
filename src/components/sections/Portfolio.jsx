@@ -8,6 +8,7 @@ const Portfolio = () => {
             title: "Fresh Mart",
             description: "Modern e-commerce platform with a seamless shopping experience and optimized checkout flow.",
             type: "E-Commerce",
+            image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
             gradient: "linear-gradient(135deg, #064e3b 0%, #065f46 50%, #0f172a 100%)",
             tags: ["E-Commerce", "Web Design"],
             link: "https://fresh-mart-1475.vercel.app/"
@@ -16,6 +17,7 @@ const Portfolio = () => {
             title: "PowerHouse Fitness",
             description: "High-performance landing page for a premium gym, designed to drive membership sign-ups.",
             type: "Lead Gen",
+            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
             gradient: "linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #0f172a 100%)",
             tags: ["Lead Gen", "High Conversion"],
             link: "https://demo-gym-gamma.vercel.app/"
@@ -24,6 +26,7 @@ const Portfolio = () => {
             title: "Beryl Healthcare",
             description: "A trusted digital presence for a modern hospital, designed to simplify patient bookings.",
             type: "Healthcare",
+            image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
             gradient: "linear-gradient(135deg, #164e63 0%, #0e7490 50%, #0f172a 100%)",
             tags: ["Healthcare", "Patient Portal"],
             link: "https://demo-hospital-beryl.vercel.app/"
@@ -68,9 +71,15 @@ const Portfolio = () => {
                             className="rounded-2xl overflow-hidden group card-hover-premium flex flex-col cursor-pointer"
                             style={{ background: '#060810', border: '1px solid rgba(59,130,246,0.12)' }}
                         >
-                            {/* Gradient image placeholder */}
-                            <div className="relative h-52 overflow-hidden" style={{ background: project.gradient }}>
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                            {/* Image with dark overlay */}
+                            <div className="relative h-52 overflow-hidden">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                {/* Dark gradient overlay */}
+                                <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(6,8,16,0.3) 0%, rgba(6,8,16,0.55) 100%)' }}></div>
                                 {/* Work type tag */}
                                 <div className="absolute top-4 left-4 z-20">
                                     <span className="font-mono text-xs font-bold px-2.5 py-1 rounded-md" style={{ background: 'rgba(6,8,16,0.8)', color: '#64748b', border: '1px solid rgba(59,130,246,0.15)' }}>
