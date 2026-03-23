@@ -17,6 +17,11 @@ const Home = () => {
 
     return (
         <div className="flex flex-col w-full">
+            {/* SEO-visible text for Google indexing — visually hidden from users */}
+            <div style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
+                <h1>ScaleUpCo</h1>
+                <p>ScaleUpCo is a digital solutions company helping businesses scale with modern websites, branding, and performance-driven systems.</p>
+            </div>
             <Hero />
             <Problem />
             <ServicesOverview />
