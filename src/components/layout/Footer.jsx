@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Twitter, Linkedin, Github } from 'lucide-react';
+import { ArrowUpRight, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -16,14 +16,14 @@ const Footer = () => {
                             Professional websites and growth systems designed to bring more customers, more calls, and more revenue for local businesses.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="h-10 w-10 rounded-full flex items-center justify-center text-[#64748b] hover:text-white transition-colors" style={{ border: '1px solid rgba(59,130,246,0.15)' }}>
+                            <a href="https://x.com/scaleupcoonline?s=11" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full flex items-center justify-center text-[#64748b] hover:text-white transition-colors" style={{ border: '1px solid rgba(59,130,246,0.15)' }}>
                                 <Twitter size={18} />
                             </a>
                             <a href="https://www.linkedin.com/company/scaleupco" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full flex items-center justify-center text-[#64748b] hover:text-white transition-colors" style={{ border: '1px solid rgba(59,130,246,0.15)' }}>
                                 <Linkedin size={18} />
                             </a>
-                            <a href="#" className="h-10 w-10 rounded-full flex items-center justify-center text-[#64748b] hover:text-white transition-colors" style={{ border: '1px solid rgba(59,130,246,0.15)' }}>
-                                <Github size={18} />
+                            <a href="https://www.instagram.com/scaleupco.online" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full flex items-center justify-center text-[#64748b] hover:text-white transition-colors" style={{ border: '1px solid rgba(59,130,246,0.15)' }}>
+                                <Instagram size={18} />
                             </a>
                         </div>
                     </div>
