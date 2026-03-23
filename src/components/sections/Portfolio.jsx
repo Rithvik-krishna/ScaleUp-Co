@@ -5,25 +5,20 @@ import { ArrowUpRight } from 'lucide-react';
 const Portfolio = () => {
     const projects = [
         {
-            title: "Restaurant Website",
-            description: "Lead generation landing page that resulted in a +220% increase in bookings.",
+            title: "Fresh Mart",
+            description: "Modern e-commerce platform with a seamless shopping experience and optimized checkout flow.",
             category: "Demo Build",
-            image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-            tags: ["Web Design", "Lead Gen"]
+            image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+            tags: ["E-Commerce", "Web Design"],
+            link: "https://fresh-mart-1475.vercel.app/"
         },
         {
-            title: "Dental Clinic Hub",
-            description: "Complete website redesign + SEO. Ranked #1 for 'dentist near me' in 3 months.",
-            category: "Concept Design",
-            image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80",
-            tags: ["Local SEO", "High Conversion"]
-        },
-        {
-            title: "Real Estate Platform",
-            description: "Property listing platform driving a 3x increase in qualified property inquiries.",
-            category: "Sample Project",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80",
-            tags: ["Platform", "Lead Capture"]
+            title: "PowerHouse Fitness",
+            description: "High-performance landing page for a premium gym, designed to drive membership sign-ups.",
+            category: "Demo Build",
+            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+            tags: ["Lead Gen", "High Conversion"],
+            link: "https://demo-gym-gamma.vercel.app/"
         }
     ];
 
@@ -51,15 +46,18 @@ const Portfolio = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8">
                     {projects.map((project, index) => (
-                        <motion.div
+                        <motion.a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-dark-surface rounded-2xl border border-gray-800 overflow-hidden group card-hover-premium flex flex-col"
+                            className="bg-dark-surface rounded-2xl border border-gray-800 overflow-hidden group card-hover-premium flex flex-col cursor-pointer"
                         >
                             <div className="relative h-60 overflow-hidden">
                                 <div className="absolute inset-0 bg-dark-bg/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -91,7 +89,7 @@ const Portfolio = () => {
                                     ))}
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
 
