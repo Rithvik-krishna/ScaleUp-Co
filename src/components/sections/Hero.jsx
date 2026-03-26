@@ -186,25 +186,6 @@ const Hero = () => {
                                     <StatCard icon={<Globe className="w-6 h-6 text-[#3b82f6]" />} stat="500+" label="Websites delivered" badge="Active" badgeColor="rgba(37,99,235,0.85)" delay={0.45} floatDelay="0.5s" />
                                     <StatCard icon={<Star className="w-6 h-6 text-[#3b82f6]" />} stat="4.9★" label="Average client rating" badge="Verified" badgeColor="rgba(100,116,139,0.85)" delay={0.6} floatDelay="1s" />
 
-                                    {/* Live activity card */}
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.8 }}
-                                        style={{
-                                            background: 'rgba(11,15,28,0.9)',
-                                            border: '1px solid rgba(59,130,246,0.15)',
-                                            borderRadius: '10px',
-                                            padding: '0.875rem 1.25rem',
-                                        }}
-                                        className="flex items-center gap-3"
-                                    >
-                                        <span className="w-2 h-2 rounded-full bg-green-400 shrink-0 animate-pulse"></span>
-                                        <p className="text-xs text-[#94a3b8] flex-1" style={{ lineHeight: 1.5 }}>
-                                            <span className="text-white font-semibold">PowerHouse Fitness</span> — new consultation booked just now
-                                        </p>
-                                        <span className="font-mono text-[10px] text-[#64748b] shrink-0">2m ago</span>
-                                    </motion.div>
                                 </div>
                             </div>
 
