@@ -12,49 +12,50 @@ const CheckIcon = () => (
 const Pricing = () => {
     const plans = [
         {
-            name: "Starter",
-            price: "₹8,999",
-            tagline: "Best for new businesses launching online",
-            description: "Perfect for new local businesses needing a professional digital presence.",
+            name: "STARTER",
+            price: "$249",
+            tagline: "Launch Your Business Online",
+            description: "Best for small businesses getting started",
             features: [
-                "Premium 3-Page Website",
-                "Mobile Responsive Design",
-                "Basic SEO Setup",
-                "Contact Form Integration",
-                "Google Business Profile Setup"
+                "3-page professional website",
+                "Mobile-optimized design",
+                "Basic SEO setup",
+                "Contact form integration"
             ],
+            extra: "👉 Perfect if you need a clean, professional online presence",
             popular: false,
             cta: "Get Started"
         },
         {
-            name: "Growth",
-            price: "₹18,999",
-            tagline: "Most popular for scaling local brands",
-            description: "Our most popular package for businesses ready to scale and capture leads.",
+            name: "GROWTH ⭐",
+            price: "$499",
+            tagline: "Turn Your Website Into a Lead Machine",
+            description: "Most popular for local businesses ready to grow",
             features: [
-                "Premium 5-Page Website",
-                "Advanced SEO & Speed Optimization",
-                "Lead Capture Systems",
-                "WhatsApp Integration",
-                "Monthly Performance Report",
-                "Priority Email Support"
+                "High-converting 5-page website",
+                "Speed & performance optimization",
+                "Lead capture system (forms + CTAs)",
+                "WhatsApp / contact integrations",
+                "Conversion-focused layout",
+                "Priority support"
             ],
+            extra: "👉 Designed to help you generate more calls, messages, and customers",
             popular: true,
-            cta: "Grow Now"
+            cta: "Grow My Business"
         },
         {
-            name: "Scale",
-            price: "₹35,000+",
-            tagline: "Best for established businesses needing advanced systems",
-            description: "Custom digital ecosystem for established brands needing maximum ROI.",
+            name: "SCALE",
+            price: "$899+",
+            tagline: "Build a System That Drives Consistent Growth",
+            description: "For businesses ready to scale and automate",
             features: [
-                "Custom Feature Development",
-                "E-commerce / Booking Systems",
-                "Automated CRM Workflows",
-                "Aggressive Local SEO Campaigns",
-                "Dedicated Account Manager",
-                "24/7 Priority Support"
+                "Custom website & feature development",
+                "Booking / e-commerce systems",
+                "CRM & workflow automation",
+                "Advanced local SEO optimization",
+                "Dedicated priority support"
             ],
+            extra: "👉 Built for businesses that want predictable, scalable growth",
             popular: false,
             cta: "Let's Talk"
         }
@@ -103,18 +104,22 @@ const Pricing = () => {
                             <div className="mb-8">
                                 <div className="flex items-baseline text-4xl font-extrabold text-white">
                                     {plan.price}
-                                    {plan.name !== "Scale" && <span className="text-lg font-medium text-[#64748b] ml-2">/one-time</span>}
+                                    {!plan.price.includes("+") && <span className="text-lg font-medium text-[#64748b] ml-2">/one-time</span>}
                                 </div>
                             </div>
 
-                            <ul className="space-y-4 mb-8 flex-grow">
+                            <ul className="space-y-4 mb-6 flex-grow">
                                 {plan.features.map((feature, fIndex) => (
-                                    <li key={fIndex} className="flex items-center gap-3 text-sm text-[#94a3b8]">
-                                        <CheckIcon />
-                                        {feature}
+                                    <li key={fIndex} className="flex items-start gap-3 text-sm text-[#94a3b8]">
+                                        <div className="mt-0.5"><CheckIcon /></div>
+                                        <span>{feature}</span>
                                     </li>
                                 ))}
                             </ul>
+
+                            <div className="mb-8 p-4 rounded-xl text-[13px] font-medium leading-relaxed" style={{ background: 'rgba(59,130,246,0.05)', color: '#94a3b8', border: '1px solid rgba(59,130,246,0.1)' }}>
+                                {plan.extra}
+                            </div>
 
                             <div className="mt-auto">
                                 <Link to="/contact">
@@ -135,11 +140,21 @@ const Pricing = () => {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <p className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium text-[#64748b]" style={{ background: '#0b0f1c', border: '1px solid rgba(59,130,246,0.12)' }}>
-                        <span className="w-2 h-2 rounded-full bg-[#2563eb] mr-2 animate-pulse"></span>
-                        Average delivery time: 7–14 days
-                    </p>
+                <div className="mt-16 max-w-4xl mx-auto p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(37,99,235,0.03)', border: '1px solid rgba(59,130,246,0.1)' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm md:text-base font-medium text-[#94a3b8]">
+                        <div className="flex items-center gap-3">
+                            <CheckIcon /> One-time payment — no hidden fees
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <CheckIcon /> Fast turnaround (3–7 days)
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <CheckIcon /> Built to generate leads, not just look good
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <CheckIcon /> Ongoing support available
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
