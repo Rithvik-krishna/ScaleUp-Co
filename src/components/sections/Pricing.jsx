@@ -13,7 +13,7 @@ const Pricing = () => {
     const plans = [
         {
             name: "STARTER",
-            price: "$249",
+            price: "₹8,999",
             tagline: "Launch Your Business Online",
             description: "Best for small businesses getting started",
             features: [
@@ -28,7 +28,7 @@ const Pricing = () => {
         },
         {
             name: "GROWTH ⭐",
-            price: "$499",
+            price: "₹18,999",
             tagline: "Turn Your Website Into a Lead Machine",
             description: "Most popular for local businesses ready to grow",
             features: [
@@ -45,7 +45,7 @@ const Pricing = () => {
         },
         {
             name: "SCALE",
-            price: "$899+",
+            price: "₹35,000+",
             tagline: "Build a System That Drives Consistent Growth",
             description: "For businesses ready to scale and automate",
             features: [
