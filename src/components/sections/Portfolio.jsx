@@ -5,22 +5,22 @@ import { ArrowUpRight } from 'lucide-react';
 const Portfolio = () => {
     const projects = [
         {
-            title: "Fresh Mart",
-            description: "Modern e-commerce platform with a seamless shopping experience and optimized checkout flow.",
-            type: "E-Commerce",
-            image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
-            gradient: "linear-gradient(135deg, #064e3b 0%, #065f46 50%, #0f172a 100%)",
-            tags: ["E-Commerce", "Web Design"],
-            link: "https://fresh-mart-1475.vercel.app/"
+            title: "ArthaGroww",
+            description: "Gamified EdTech platform teaching stock markets, AI automation, Web3, and entrepreneurship through interactive daily modules.",
+            type: "EdTech & Web App",
+            image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+            gradient: "linear-gradient(135deg, #0284c7 0%, #0f766e 50%, #0f172a 100%)",
+            tags: ["Fintech", "Mobile Web App", "EdTech"],
+            link: "https://arthagroww.vercel.app/"
         },
         {
-            title: "PowerHouse Fitness",
-            description: "High-performance landing page for a premium gym, designed to drive membership sign-ups.",
-            type: "Lead Gen",
-            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-            gradient: "linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #0f172a 100%)",
-            tags: ["Lead Gen", "High Conversion"],
-            link: "https://demo-gym-gamma.vercel.app/"
+            title: "Chameleon Agent",
+            description: "A web-based remote desktop solution similar to AnyDesk, enabling seamless remote system access and control directly through the browser.",
+            type: "Web Application",
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+            gradient: "linear-gradient(135deg, #7c3aed 0%, #4338ca 50%, #0f172a 100%)",
+            tags: ["Remote Desktop", "Web App", "WebRTC"],
+            link: "https://www.chameleon-agent.online/"
         },
         {
             title: "Beryl Healthcare",
