@@ -10,7 +10,7 @@ const Footer = () => {
 
                     <div className="col-span-1 md:col-span-2">
                         <Link to="/" className="text-3xl font-bold tracking-tight mb-6 inline-block text-white">
-                            ScaleUp<span className="text-[#3b82f6]"> Co.</span>
+                            ScaleUp<span className="text-[#3b82f6]">Co.</span>
                         </Link>
                         <p className="text-[#64748b] max-w-sm mb-8">
                             Professional websites and growth systems designed to bring more customers, more calls, and more revenue for local businesses.

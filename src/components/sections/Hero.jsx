@@ -102,16 +102,7 @@ const Hero = () => {
                                 transition={{ duration: 0.8, ease: 'easeOut' }}
                                 className="max-w-2xl"
                             >
-                                {/* Eyebrow */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.1 }}
-                                    className="inline-flex items-center mb-6"
-                                    style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.25)', borderRadius: '99px', padding: '6px 14px' }}
-                                >
-                                    <span className="text-sm font-semibold text-[#3b82f6] tracking-wide">Digital Growth Agency</span>
-                                </motion.div>
+
 
                                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
                                     We Help Businesses <br />
