@@ -18,7 +18,10 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'Services', path: '/services' },
         { name: 'Pricing', path: '/pricing' },
-        { name: 'About', path: '/about' }
+        { name: 'About', path: '/about' },
+        { name: 'Portfolio', path: '/portfolio' },
+        { name: 'Industries', path: '/industries' },
+        { name: 'Blog', path: '/blog' }
     ];
 
     return (
@@ -26,7 +29,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-bold tracking-tight">
-                    ScaleUp<span className="text-[#3b82f6]">Co.</span>
+                    ScaleUp<span className="text-[#3b82f6]"> Co</span>
                 </Link>
 
                 {/* Desktop Nav */}

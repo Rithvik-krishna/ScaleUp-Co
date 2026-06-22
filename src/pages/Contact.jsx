@@ -1,22 +1,41 @@
 import React, { useEffect } from 'react';
 import { Mail, Phone, CalendarCheck, ShieldCheck, Clock } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import SEO from '../components/seo/SEO';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const Contact = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (
-        <div className="flex flex-col w-full pt-20 bg-dark-bg min-h-screen">
-            <div className="max-w-7xl mx-auto px-6 py-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact ScaleUp Co",
+        "description": "Get in touch with ScaleUp Co in Bangalore, India to schedule a free strategy call about websites, SEO, and AI automation.",
+        "url": "https://www.scaleupco.online/contact"
+    };
 
+    return (
+        <div className="flex flex-col w-full pt-20 bg-dark-bg min-h-screen text-white">
+            <SEO 
+                title="Contact ScaleUp Co | Schedule a Free Digital Strategy Consultation"
+                description="Ready to scale your business? Contact ScaleUp Co to consult on high-performance websites, local SEO strategies, AI chatbots, and voice receptionist solutions in Bangalore, India."
+                canonical="https://www.scaleupco.online/contact"
+                keywords="Contact ScaleUp Co, Web Development Bangalore, SEO Agency Bangalore, AI Automation Consultation"
+                schema={schema}
+            />
+
+            <div className="max-w-7xl mx-auto px-6 py-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div>
-                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                        Let's <span className="text-gradient">Talk Growth with ScaleUpCo.</span>
+                    <Breadcrumbs items={[{ name: 'Contact', path: '/contact' }]} />
+                    
+                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight mt-6">
+                        Let's <span className="text-gradient">Talk Growth.</span>
                     </h1>
                     <p className="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
-                        Ready to stop losing customers to your competitors? Drop ScaleUpCo a message and we'll schedule a time to map out your digital growth strategy.
+                        Ready to stop losing customers to your competitors? Drop ScaleUp Co a message and we'll schedule a time to map out your digital growth strategy.
                     </p>
 
                     <div className="space-y-8">
@@ -70,7 +89,7 @@ const Contact = () => {
                     </div>
 
                     <form className="space-y-6 relative z-10" action="https://formsubmit.co/scaleupco.contact@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Submission from ScaleUpCo Website" />
+                        <input type="hidden" name="_subject" value="New Submission from ScaleUp Co Website" />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
@@ -103,7 +122,6 @@ const Contact = () => {
                         </Button>
                     </form>
                 </div>
-
             </div>
         </div>
     );

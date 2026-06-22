@@ -20,13 +20,13 @@ const TermsAndConditions = () => {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-white">1. Acceptance of Terms</h2>
                     <p>
-                        By accessing or using ScaleUpCo's website and services, you agree to these Terms & Conditions.
+                        By accessing or using ScaleUp Co's website and services, you agree to these Terms & Conditions.
                     </p>
                 </section>
 
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-white">2. Services</h2>
-                    <p>ScaleUpCo provides services including:</p>
+                    <p>ScaleUp Co provides services including:</p>
                     <ul className="list-disc pl-6 space-y-2">
                         <li>Website Development</li>
                         <li>SEO & Google Visibility</li>
@@ -68,13 +68,13 @@ const TermsAndConditions = () => {
                         Upon completion of payment, ownership of final approved deliverables transfers to the client unless otherwise specified in writing.
                     </p>
                     <p>
-                        ScaleUpCo retains ownership of internal processes, frameworks, templates, and proprietary systems.
+                        ScaleUp Co retains ownership of internal processes, frameworks, templates, and proprietary systems.
                     </p>
                 </section>
 
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-white">6. Limitation of Liability</h2>
-                    <p>ScaleUpCo is not liable for:</p>
+                    <p>ScaleUp Co is not liable for:</p>
                     <ul className="list-disc pl-6 space-y-2">
                         <li>Business losses</li>
                         <li>Revenue losses</li>

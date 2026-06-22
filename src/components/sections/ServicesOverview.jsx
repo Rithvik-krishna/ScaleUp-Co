@@ -14,7 +14,7 @@ const ServiceCard = ({ service, index }) => {
             transition={{ delay: index * 0.1 }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="rounded-2xl p-8 relative overflow-hidden flex flex-col"
+            className="rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between"
             style={{
                 background: '#060810',
                 border: '1px solid rgba(59,130,246,0.12)',
@@ -33,21 +33,31 @@ const ServiceCard = ({ service, index }) => {
                 transition: 'opacity 0.3s ease'
             }}></div>
 
-            <div className="mb-6 w-16 h-16 rounded-xl flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
-                {service.icon}
+            <div>
+                <div className="mb-6 w-16 h-16 rounded-xl flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
+                    {service.icon}
+                </div>
+
+                <Link to={service.link}>
+                    <h3 className="text-2xl font-bold mb-4 text-white hover:text-[#3b82f6] transition-colors">{service.title}</h3>
+                </Link>
+                <p className="text-[#94a3b8] mb-8 min-h-[80px] font-light text-sm leading-relaxed">
+                    {service.description}
+                </p>
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-            <p className="text-[#94a3b8] mb-8 min-h-[100px]">
-                {service.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2 mt-auto">
-                {service.features.map((feature, fIndex) => (
-                    <span key={fIndex} className="text-xs font-semibold px-3 py-1.5 rounded-md" style={{ background: 'rgba(37,99,235,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
-                        {feature}
-                    </span>
-                ))}
+            <div className="flex items-center justify-between pt-4 border-t border-gray-800/40">
+                <div className="flex flex-wrap gap-1.5">
+                    {service.features.map((feature, fIndex) => (
+                        <span key={fIndex} className="text-[10px] font-bold px-2 py-1 rounded" style={{ background: 'rgba(37,99,235,0.06)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.12)' }}>
+                            {feature}
+                        </span>
+                    ))}
+                </div>
+                <Link to={service.link} className="text-xs font-bold text-[#3b82f6] hover:text-white flex items-center gap-1 shrink-0 ml-2">
+                    Learn More
+                    <ArrowRight size={12} />
+                </Link>
             </div>
         </motion.div>
     );
@@ -59,55 +69,64 @@ const ServicesOverview = ({ showViewAll = true }) => {
             icon: <Laptop className="w-10 h-10 text-[#3b82f6]" />,
             title: "Website Development",
             description: "High-performance, conversion-focused websites designed to turn visitors into customers. Fully responsive, fast-loading, and built for growth.",
-            features: ["Custom Design", "Mobile Optimized", "Speed Optimized"]
+            features: ["Custom Design", "Mobile Optimized", "Speed Optimized"],
+            link: "/services/web-development"
         },
         {
             icon: <Search className="w-10 h-10 text-[#3b82f6]" />,
             title: "Google Visibility",
             description: "Increase your visibility on Google with local SEO, Google Business Profile optimization, and strategies that help customers find your business first.",
-            features: ["Local SEO", "GBP Optimization", "Review Management"]
+            features: ["Local SEO", "GBP Optimization", "Review Management"],
+            link: "/services/seo"
         },
         {
             icon: <MessageSquarePlus className="w-10 h-10 text-[#3b82f6]" />,
             title: "Lead Generation Systems",
             description: "Automated lead capture systems that turn website visitors into qualified appointments using forms, workflows, and CRM integrations.",
-            features: ["CRM Setup", "Automation", "Appointment Booking"]
+            features: ["CRM Setup", "Automation", "Appointment Booking"],
+            link: "/services/lead-generation"
         },
         {
             icon: <Share2 className="w-10 h-10 text-[#3b82f6]" />,
             title: "Social Media Marketing",
             description: "Grow your brand presence and generate inbound leads through strategic social media management and content marketing.",
-            features: ["Content Strategy", "Instagram Growth", "LinkedIn Marketing"]
+            features: ["Content Strategy", "Instagram Growth", "LinkedIn Marketing"],
+            link: "/services"
         },
         {
             icon: <Video className="w-10 h-10 text-[#3b82f6]" />,
             title: "Video Editing & Content Creation",
             description: "Transform raw footage into engaging content optimized for social media, advertising campaigns, and audience growth.",
-            features: ["Reels Editing", "Shorts Creation", "Content Repurposing"]
+            features: ["Reels Editing", "Shorts Creation", "Content Repurposing"],
+            link: "/services"
         },
         {
             icon: <Megaphone className="w-10 h-10 text-[#3b82f6]" />,
             title: "Paid Advertising",
             description: "Drive targeted traffic and qualified leads through data-driven advertising campaigns across major digital platforms.",
-            features: ["Meta Ads", "Google Ads", "Retargeting"]
+            features: ["Meta Ads", "Google Ads", "Retargeting"],
+            link: "/services"
         },
         {
             icon: <Bot className="w-10 h-10 text-[#3b82f6]" />,
             title: "AI Chatbots",
             description: "24/7 AI-powered chat assistants that engage visitors, answer questions, qualify leads, and automate customer interactions.",
-            features: ["Website Chatbot", "WhatsApp AI", "Lead Qualification"]
+            features: ["Website Chatbot", "WhatsApp AI", "Lead Qualification"],
+            link: "/services/ai-chatbots"
         },
         {
             icon: <PhoneCall className="w-10 h-10 text-[#3b82f6]" />,
             title: "AI Voice Receptionist",
             description: "AI-powered voice agents that answer calls, qualify prospects, schedule appointments, and provide instant customer support.",
-            features: ["Call Answering", "Appointment Booking", "Lead Qualification"]
+            features: ["Call Answering", "Appointment Booking", "Lead Qualification"],
+            link: "/services/ai-voice-receptionist"
         },
         {
             icon: <Cpu className="w-10 h-10 text-[#3b82f6]" />,
             title: "Custom AI Agents",
             description: "Custom-built AI agents that automate repetitive business processes, streamline operations, and improve productivity.",
-            features: ["Workflow Automation", "CRM Integration", "Custom AI Systems"]
+            features: ["Workflow Automation", "CRM Integration", "Custom AI Systems"],
+            link: "/services/business-automation"
         }
     ];
 

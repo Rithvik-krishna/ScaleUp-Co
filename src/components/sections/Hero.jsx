@@ -104,10 +104,12 @@ const Hero = () => {
                             >
 
 
-                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                                    We Help Businesses <br />
-                                    <span className="text-gradient">Scale Online.</span>
+                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
+                                    ScaleUp Co
                                 </h1>
+                                <p className="text-2xl md:text-3xl font-bold text-gradient mb-6 leading-tight">
+                                    Web Development, SEO & AI Automation
+                                </p>
 
                                 <p className="text-lg md:text-xl text-[#94a3b8] mb-8 max-w-xl leading-relaxed">
                                     We design high-converting websites and digital growth systems that bring more visibility, leads, and revenue — for every kind of business.
