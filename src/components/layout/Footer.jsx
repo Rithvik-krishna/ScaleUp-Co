@@ -55,8 +55,8 @@ const Footer = () => {
                         &copy; {new Date().getFullYear()} ScaleUp Co. All rights reserved.
                     </p>
                     <div className="flex space-x-6 text-sm">
-                        <Link to="#" className="text-[#64748b] hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link to="#" className="text-[#64748b] hover:text-white transition-colors">Terms of Service</Link>
+                        <Link to="/privacy-policy" className="text-[#64748b] hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-and-conditions" className="text-[#64748b] hover:text-white transition-colors">Terms & Conditions</Link>
                     </div>
                 </div>
             </div>
