@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-white">1. Introduction</h2>
                     <p>
-                        ScaleUp Co. values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you use our website and services.
+                        ScaleUpCo values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you use our website and services.
                     </p>
                 </section>
 

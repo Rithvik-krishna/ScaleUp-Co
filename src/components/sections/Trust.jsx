@@ -37,7 +37,7 @@ const Trust = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white"
                     >
-                        Why Businesses <span className="text-gradient">Trust ScaleUp Co.</span>
+                        Why Businesses <span className="text-gradient">Trust ScaleUpCo</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

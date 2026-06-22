@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-                            Why Choose <span className="text-gradient">ScaleUp Co.</span>?
+                            Why Choose <span className="text-gradient">ScaleUpCo</span>?
                         </h2>
                         <p className="text-lg text-[#94a3b8] mb-8 leading-relaxed max-w-lg">
                             We separate ourselves from traditional agencies by focusing on what actually matters: <span className="font-bold text-white">Revenue</span>.

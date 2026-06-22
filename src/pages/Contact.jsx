@@ -13,10 +13,10 @@ const Contact = () => {
 
                 <div>
                     <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                        Let's <span className="text-gradient">Talk Growth.</span>
+                        Let's <span className="text-gradient">Talk Growth with ScaleUpCo.</span>
                     </h1>
                     <p className="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
-                        Ready to stop losing customers to your competitors? Drop us a message and we'll schedule a time to map out your digital growth strategy.
+                        Ready to stop losing customers to your competitors? Drop ScaleUpCo a message and we'll schedule a time to map out your digital growth strategy.
                     </p>
 
                     <div className="space-y-8">
@@ -70,7 +70,7 @@ const Contact = () => {
                     </div>
 
                     <form className="space-y-6 relative z-10" action="https://formsubmit.co/scaleupco.contact@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Submission from ScaleUp Co. Website" />
+                        <input type="hidden" name="_subject" value="New Submission from ScaleUpCo Website" />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">

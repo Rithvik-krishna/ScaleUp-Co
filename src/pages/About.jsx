@@ -13,13 +13,13 @@ const About = () => {
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900">
-                            We Are <span className="text-blue-600">ScaleUp Co.</span>
+                            We Are <span className="text-blue-600">ScaleUpCo.</span>
                         </h1>
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                             We started with a simple observation: Most local businesses have terrible websites that actually cost them money every single day.
                         </p>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Our mission is to arm ambitious local business owners with enterprise-grade digital systems so they can dominate their markets and scale without friction.
+                            At ScaleUpCo, our mission is to arm ambitious local business owners with enterprise-grade digital systems so they can dominate their markets and scale without friction.
                         </p>
                     </div>
                     <div className="relative">
