@@ -53,9 +53,9 @@ const StatCard = ({ icon, stat, label, badge, badgeColor, delay, floatDelay }) =
 
 /* ---------- Ticker ---------- */
 const tickerItems = [
-    'Website Design', 'SEO Growth', 'Lead Generation', 'Google Visibility',
-    'Conversion Optimization', 'WhatsApp Integration', 'Brand Identity',
-    'E-Commerce', 'Analytics & Tracking'
+    'Website Development', 'Google Visibility', 'Lead Generation Systems',
+    'Social Media Marketing', 'Video Editing & Content Creation', 'Paid Advertising',
+    'AI Chatbots', 'AI Voice Receptionist', 'Custom AI Agents'
 ];
 
 const Ticker = () => {
@@ -107,10 +107,9 @@ const Hero = () => {
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.1 }}
-                                    className="inline-flex items-center gap-2 mb-6"
+                                    className="inline-flex items-center mb-6"
                                     style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(59,130,246,0.25)', borderRadius: '99px', padding: '6px 14px' }}
                                 >
-                                    <span className="w-2 h-2 rounded-full bg-[#3b82f6] animate-pulse"></span>
                                     <span className="text-sm font-semibold text-[#3b82f6] tracking-wide">Digital Growth Agency</span>
                                 </motion.div>
 
