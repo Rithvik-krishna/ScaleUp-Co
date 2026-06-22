@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Laptop, Search, MessageSquarePlus, ArrowRight } from 'lucide-react';
+import { Laptop, Search, MessageSquarePlus, ArrowRight, Share2, Video, Megaphone, Bot, PhoneCall, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service, index }) => {
@@ -58,20 +58,56 @@ const ServicesOverview = () => {
         {
             icon: <Laptop className="w-10 h-10 text-[#3b82f6]" />,
             title: "Website Development",
-            description: "High-performance, beautifully designed websites built to convert visitors into paying customers. Fully responsive and lightning fast.",
-            features: ["Custom Design", "Mobile Optimization", "Speed Optimized"]
+            description: "High-performance, conversion-focused websites designed to turn visitors into customers. Fully responsive, fast-loading, and built for growth.",
+            features: ["Custom Design", "Mobile Optimized", "Speed Optimized"]
         },
         {
             icon: <Search className="w-10 h-10 text-[#3b82f6]" />,
             title: "Google Visibility",
-            description: "Dominate local search results. We optimize your Google Business Profile and website SEO to ensure you rank #1 when customers search.",
-            features: ["Local SEO", "Profile Optimization", "Review Management"]
+            description: "Increase your visibility on Google with local SEO, Google Business Profile optimization, and strategies that help customers find your business first.",
+            features: ["Local SEO", "GBP Optimization", "Review Management"]
         },
         {
             icon: <MessageSquarePlus className="w-10 h-10 text-[#3b82f6]" />,
             title: "Lead Generation Systems",
-            description: "Automated systems that capture leads and turn them into appointments. Integrated with WhatsApp, forms, and booking calendars.",
-            features: ["Automated Workflows", "WhatsApp Integration", "CRM Setup"]
+            description: "Automated lead capture systems that turn website visitors into qualified appointments using forms, workflows, and CRM integrations.",
+            features: ["CRM Setup", "Automation", "Appointment Booking"]
+        },
+        {
+            icon: <Share2 className="w-10 h-10 text-[#3b82f6]" />,
+            title: "Social Media Marketing",
+            description: "Grow your brand presence and generate inbound leads through strategic social media management and content marketing.",
+            features: ["Content Strategy", "Instagram Growth", "LinkedIn Marketing"]
+        },
+        {
+            icon: <Video className="w-10 h-10 text-[#3b82f6]" />,
+            title: "Video Editing & Content Creation",
+            description: "Transform raw footage into engaging content optimized for social media, advertising campaigns, and audience growth.",
+            features: ["Reels Editing", "Shorts Creation", "Content Repurposing"]
+        },
+        {
+            icon: <Megaphone className="w-10 h-10 text-[#3b82f6]" />,
+            title: "Paid Advertising",
+            description: "Drive targeted traffic and qualified leads through data-driven advertising campaigns across major digital platforms.",
+            features: ["Meta Ads", "Google Ads", "Retargeting"]
+        },
+        {
+            icon: <Bot className="w-10 h-10 text-[#3b82f6]" />,
+            title: "AI Chatbots",
+            description: "24/7 AI-powered chat assistants that engage visitors, answer questions, qualify leads, and automate customer interactions.",
+            features: ["Website Chatbot", "WhatsApp AI", "Lead Qualification"]
+        },
+        {
+            icon: <PhoneCall className="w-10 h-10 text-[#3b82f6]" />,
+            title: "AI Voice Receptionist",
+            description: "AI-powered voice agents that answer calls, qualify prospects, schedule appointments, and provide instant customer support.",
+            features: ["Call Answering", "Appointment Booking", "Lead Qualification"]
+        },
+        {
+            icon: <Cpu className="w-10 h-10 text-[#3b82f6]" />,
+            title: "Custom AI Agents",
+            description: "Custom-built AI agents that automate repetitive business processes, streamline operations, and improve productivity.",
+            features: ["Workflow Automation", "CRM Integration", "Custom AI Systems"]
         }
     ];
 

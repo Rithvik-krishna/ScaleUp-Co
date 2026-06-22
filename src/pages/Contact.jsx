@@ -43,8 +43,6 @@ const Contact = () => {
                 </div>
 
                 <div className="bg-dark-surface border border-gray-800 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#00E1FF]/10 rounded-full blur-[80px]"></div>
-
                     <h3 className="text-2xl font-bold mb-6 relative z-10">Send a Message</h3>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-8 relative z-10 hidden lg:flex">

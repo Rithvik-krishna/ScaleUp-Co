@@ -12,52 +12,56 @@ const CheckIcon = () => (
 const Pricing = () => {
     const plans = [
         {
-            name: "STARTER",
-            price: "₹8,999",
-            tagline: "Launch Your Business Online",
-            description: "Best for small businesses getting started",
+            name: "LAUNCH",
+            tagline: "Build Your Online Foundation",
+            description: "Perfect for businesses establishing their digital presence and generating their first leads online.",
             features: [
-                "3-page professional website",
-                "Mobile-optimized design",
-                "Basic SEO setup",
-                "Contact form integration"
+                "Professional Website Development",
+                "Mobile Optimization",
+                "Basic SEO Setup",
+                "Contact Forms & Lead Capture",
+                "Google Business Profile Setup",
+                "Social Media Profile Optimization"
             ],
-            extra: "👉 Perfect if you need a clean, professional online presence",
+            extra: "👉 Perfect for businesses launching their online presence",
             popular: false,
-            cta: "Get Started"
+            cta: "Launch My Business"
         },
         {
-            name: "GROWTH ⭐",
-            price: "₹18,999",
-            tagline: "Turn Your Website Into a Lead Machine",
-            description: "Most popular for local businesses ready to grow",
+            name: "GROWTH",
+            tagline: "Generate Consistent Leads & Customers",
+            description: "Our most popular growth system for businesses ready to attract, engage, and convert more customers.",
             features: [
-                "High-converting 5-page website",
-                "Speed & performance optimization",
-                "Lead capture system (forms + CTAs)",
-                "WhatsApp / contact integrations",
-                "Conversion-focused layout",
-                "Priority support"
+                "High-Converting Website",
+                "Google Visibility Optimization",
+                "Lead Generation System",
+                "WhatsApp Integration",
+                "Social Media Marketing Setup",
+                "Video Content Creation",
+                "Conversion-Focused Landing Pages",
+                "Monthly Growth Consultation"
             ],
-            extra: "👉 Designed to help you generate more calls, messages, and customers",
+            extra: "👉 Designed to generate more leads, calls, and customers",
             popular: true,
             cta: "Grow My Business"
         },
         {
             name: "SCALE",
-            price: "₹35,000+",
-            tagline: "Build a System That Drives Consistent Growth",
-            description: "For businesses ready to scale and automate",
+            tagline: "Automate, Optimize & Scale Revenue",
+            description: "For businesses ready to automate operations, improve efficiency, and scale predictable growth.",
             features: [
-                "Custom website & feature development",
-                "Booking / e-commerce systems",
-                "CRM & workflow automation",
-                "Advanced local SEO optimization",
-                "Dedicated priority support"
+                "Everything in Growth",
+                "AI Chatbot Implementation",
+                "AI Voice Receptionist",
+                "Custom AI Agents",
+                "CRM & Workflow Automation",
+                "Paid Advertising Setup",
+                "Advanced Lead Nurturing Systems",
+                "Priority Support"
             ],
-            extra: "👉 Built for businesses that want predictable, scalable growth",
+            extra: "👉 Built for businesses that want scalable growth through automation",
             popular: false,
-            cta: "Let's Talk"
+            cta: "Scale My Business"
         }
     ];
 
@@ -69,7 +73,7 @@ const Pricing = () => {
                         Flexible <span className="text-gradient">Growth Packages</span>
                     </h2>
                     <p className="text-lg text-[#94a3b8]">
-                        No hidden fees. No complicated contracts. Just proven systems that deliver results for businesses at every stage.
+                        No complicated contracts. Just proven systems that deliver results for businesses at every stage.
                     </p>
                 </div>
 
@@ -98,14 +102,10 @@ const Pricing = () => {
                             <div className="mb-6">
                                 <h3 className="text-2xl font-bold mb-1 text-white">{plan.name}</h3>
                                 <p className="text-sm font-medium mb-3" style={{ color: '#94a3b8' }}>{plan.tagline}</p>
-                                <p className="text-sm text-[#64748b] min-h-[40px]">{plan.description}</p>
                             </div>
 
                             <div className="mb-8">
-                                <div className="flex items-baseline text-4xl font-extrabold text-white">
-                                    {plan.price}
-                                    {!plan.price.includes("+") && <span className="text-lg font-medium text-[#64748b] ml-2">/one-time</span>}
-                                </div>
+                                <p className="text-sm text-[#64748b] min-h-[40px]">{plan.description}</p>
                             </div>
 
                             <ul className="space-y-4 mb-6 flex-grow">
@@ -143,7 +143,7 @@ const Pricing = () => {
                 <div className="mt-16 max-w-4xl mx-auto p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(37,99,235,0.03)', border: '1px solid rgba(59,130,246,0.1)' }}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm md:text-base font-medium text-[#94a3b8]">
                         <div className="flex items-center gap-3">
-                            <CheckIcon /> One-time payment — no hidden fees
+                            <CheckIcon /> No recurring contracts — full ownership
                         </div>
                         <div className="flex items-center gap-3">
                             <CheckIcon /> Fast turnaround (3–7 days)
