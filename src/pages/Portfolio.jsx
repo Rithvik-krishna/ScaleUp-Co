@@ -11,43 +11,30 @@ const Portfolio = () => {
 
     const projects = [
         {
-            name: "CareFirst Dental Clinic",
-            industry: "Healthcare & Medical Clinics",
-            services: ["Website Redesign", "Google Visibility (Local SEO)", "AI Voice Receptionist"],
+            name: "ArthaGroww",
+            industry: "EdTech & Web App",
+            services: ["Web Application Development", "Gamified Learning Engine", "UI/UX Design", "AI Assistant Integration"],
             results: [
-                "Ranked #1 for local dentist searches within 90 days",
-                "45+ monthly appointments scheduled automatically by AI agent",
-                "Reduced phone-answering workload for clinic staff by 60%"
+                "Built and scaled the mobile web app to support 150,000+ active student builders",
+                "Developed interactive daily modules facilitating 3.2M+ completed quiz loops",
+                "Engineered gamified streak multipliers driving a 94% retention rate"
             ],
-            techStack: ["Vite React", "Google Business Profile API", "VAPI Voice AI", "TailwindCSS"],
-            url: "https://www.carefirstdental.clinic",
-            image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            techStack: ["Next.js", "TailwindCSS", "Framer Motion", "Supabase", "Vercel"],
+            url: "https://arthagroww.vercel.app/",
+            image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
         },
         {
-            name: "Apex Realty",
-            industry: "Real Estate & Property Development",
-            services: ["Custom AI Agents", "Lead Capture Systems", "Meta Paid Advertising"],
+            name: "Chameleon Agent",
+            industry: "Web Application",
+            services: ["WebRTC Remote Access System", "Turn/Stun Server Configuration", "Low-Latency Video Streaming", "E2E Encrypted Protocol Design"],
             results: [
-                "Captured and qualified 800+ high-intent property leads",
-                "Reduced sales team lead-qualification time by 75%",
-                "Lowered cost-per-lead (CPL) by 35% compared to previous agency campaigns"
+                "Achieved < 100ms connection latency for real-time remote system control",
+                "Built secure peer-to-peer browser-to-desktop access with E2E encryption",
+                "Scaled TURN/STUN server architecture supporting concurrent active sessions"
             ],
-            techStack: ["React", "OpenAI Assistants API", "HubSpot CRM", "Meta Ads API"],
-            url: "https://www.apexrealty.co",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            name: "GreenLine Logistics",
-            industry: "Supply Chain & Transport",
-            services: ["Web Development", "Local SEO", "WhatsApp Lead Automation"],
-            results: [
-                "+180% growth in inbound commercial freight quotes",
-                "100% of website queries logged automatically into Google Sheets CRM",
-                "Fast mobile load times under 1.2s boosting user retention"
-            ],
-            techStack: ["React", "Node.js", "Vite", "Twilio WhatsApp API"],
-            url: "https://www.greenlinelogistics.in",
-            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            techStack: ["React", "WebRTC", "Socket.io", "Node.js", "TailwindCSS", "Docker"],
+            url: "https://www.chameleon-agent.online/",
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
         }
     ];
 
