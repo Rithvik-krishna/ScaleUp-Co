@@ -20,7 +20,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <ServicesOverview />
+            <ServicesOverview showViewAll={false} />
             <FinalCTA />
         </div>
     );

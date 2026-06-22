@@ -53,7 +53,7 @@ const ServiceCard = ({ service, index }) => {
     );
 };
 
-const ServicesOverview = () => {
+const ServicesOverview = ({ showViewAll = true }) => {
     const services = [
         {
             icon: <Laptop className="w-10 h-10 text-[#3b82f6]" />,
@@ -123,9 +123,11 @@ const ServicesOverview = () => {
                             We don't just build websites. We build complete digital ecosystems designed to attract, capture, and convert at scale.
                         </p>
                     </div>
-                    <Link to="/services" className="hidden md:inline-flex items-center text-[#3b82f6] hover:text-white transition-colors font-medium mt-6 md:mt-0">
-                        View All Services <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
+                    {showViewAll && (
+                        <Link to="/services" className="hidden md:inline-flex items-center text-[#3b82f6] hover:text-white transition-colors font-medium mt-6 md:mt-0">
+                            View All Services <ArrowRight className="ml-2 w-5 h-5" />
+                        </Link>
+                    )}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -134,11 +136,13 @@ const ServicesOverview = () => {
                     ))}
                 </div>
 
-                <div className="mt-8 md:hidden flex justify-center">
-                    <Link to="/services" className="inline-flex items-center text-[#3b82f6] font-medium">
-                        View All Services <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
-                </div>
+                {showViewAll && (
+                    <div className="mt-8 md:hidden flex justify-center">
+                        <Link to="/services" className="inline-flex items-center text-[#3b82f6] font-medium">
+                            View All Services <ArrowRight className="ml-2 w-5 h-5" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );
