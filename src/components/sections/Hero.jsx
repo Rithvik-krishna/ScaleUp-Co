@@ -109,11 +109,11 @@ const Hero = () => {
                                     ScaleUp Co
                                 </h1>
                                 <p className="text-2xl md:text-3xl font-bold text-gradient mb-6 leading-tight">
-                                    Web Development, SEO & AI Automation
+                                    Growth Systems, AI Automation & Websites That Scale Businesses
                                 </p>
 
                                 <p className="text-lg md:text-xl text-[#94a3b8] mb-8 max-w-xl leading-relaxed">
-                                    We design high-converting websites and digital growth systems that bring more visibility, leads, and revenue — for every kind of business.
+                                    We help businesses generate more leads, close more customers, and automate operations through websites, SEO, paid advertising, CRM systems, and AI-powered automation.
                                 </p>
 
                                 {/* Inline metrics strip */}
@@ -130,9 +130,9 @@ const Hero = () => {
                                     }}
                                 >
                                     {[
-                                        { value: '+342%', label: 'Avg. revenue growth' },
-                                        { value: '500+',  label: 'Projects delivered' },
-                                        { value: '4.9★',  label: 'Client rating' },
+                                        { value: 'Growth', label: 'End-to-end solutions' },
+                                        { value: '11 Core',  label: 'Services offered' },
+                                        { value: 'All-in-One',  label: 'Web, Marketing & AI' },
                                     ].map((m, i) => (
                                         <div key={i} className="flex-1 flex flex-col items-center justify-center py-3" style={{ borderRight: i < 2 ? '1px solid rgba(59,130,246,0.12)' : 'none' }}>
                                             <span style={{ fontSize: '1.4rem', fontWeight: 700, color: 'white', lineHeight: 1.2 }}>{m.value}</span>
@@ -145,7 +145,7 @@ const Hero = () => {
                                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                                     <Link to="/contact">
                                         <button style={{ background: '#2563eb', borderRadius: '6px' }} className="flex items-center justify-center gap-2 px-7 py-4 text-base font-semibold text-white hover:bg-[#3b82f6] transition-colors group w-full sm:w-auto">
-                                            Book Free Consultation
+                                            Book Free Strategy Call
                                             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                         </button>
                                     </Link>
@@ -160,7 +160,7 @@ const Hero = () => {
                                 <div className="mt-12">
                                     <p className="text-sm text-[#64748b] mb-4 font-medium uppercase tracking-wider">Helping businesses in:</p>
                                     <div className="flex flex-wrap gap-3">
-                                        {['Restaurants', 'Clinics', 'Gyms', 'Real Estate', 'Salons', 'Local Retail', 'Startups', 'E-Commerce'].map((industry) => (
+                                        {['Restaurants', 'Clinics', 'Gyms', 'Real Estate', 'Salons', 'Local Retail', 'Startups', 'E-Commerce', 'Professional Services', 'Education', 'Construction', 'Home Services'].map((industry) => (
                                             <span key={industry} style={{ background: 'rgba(11,15,28,0.8)', border: '1px solid rgba(59,130,246,0.15)', borderRadius: '99px' }} className="text-xs font-semibold text-[#94a3b8] px-3 py-1.5">
                                                 {industry}
                                             </span>
@@ -175,10 +175,9 @@ const Hero = () => {
                                 <div className="self-stretch w-px" style={{ background: 'rgba(59,130,246,0.2)', minHeight: '320px' }}></div>
 
                                 <div className="flex flex-col gap-4 max-w-sm flex-1">
-                                    <StatCard icon={<TrendingUp className="w-6 h-6 text-[#3b82f6]" />} stat="+342%" label="Average revenue growth" badge="↑ YOY" badgeColor="rgba(34,197,94,0.8)" delay={0.3} floatDelay="0s" />
-                                    <StatCard icon={<Globe className="w-6 h-6 text-[#3b82f6]" />} stat="500+" label="Websites delivered" badge="Active" badgeColor="rgba(37,99,235,0.85)" delay={0.45} floatDelay="0.5s" />
-                                    <StatCard icon={<Star className="w-6 h-6 text-[#3b82f6]" />} stat="4.9★" label="Average client rating" badge="Verified" badgeColor="rgba(100,116,139,0.85)" delay={0.6} floatDelay="1s" />
-
+                                    <StatCard icon={<TrendingUp className="w-6 h-6 text-[#3b82f6]" />} stat="Growth" label="End-to-End Solutions" badge="Integrated" badgeColor="rgba(34,197,94,0.8)" delay={0.3} floatDelay="0s" />
+                                    <StatCard icon={<Globe className="w-6 h-6 text-[#3b82f6]" />} stat="11 Core" label="Services Offered" badge="AI & Web" badgeColor="rgba(37,99,235,0.85)" delay={0.45} floatDelay="0.5s" />
+                                    <StatCard icon={<Star className="w-6 h-6 text-[#3b82f6]" />} stat="All-in-One" label="Web, Marketing & AI" badge="One Roof" badgeColor="rgba(100,116,139,0.85)" delay={0.6} floatDelay="1s" />
                                 </div>
                             </div>
 

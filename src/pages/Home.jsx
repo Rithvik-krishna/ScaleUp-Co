@@ -20,15 +20,15 @@ const Home = () => {
     return (
         <div className="flex flex-col w-full">
             <SEO 
-                title="ScaleUp Co | Web Development, SEO, AI Automation & Lead Generation"
-                description="ScaleUp Co helps businesses grow with websites, SEO, AI chatbots, AI voice receptionists, lead generation, and business automation."
+                title="ScaleUp Co | Web Development, SEO, Lead Generation & AI Automation"
+                description="ScaleUp Co helps businesses grow with websites, SEO, lead generation, paid advertising, CRM automation, AI chatbots, AI voice receptionists, and custom AI agents."
                 canonical="https://www.scaleupco.online"
-                keywords="ScaleUp Co, Web Development Bangalore, SEO Agency Bangalore, AI Automation, AI Chatbots, AI Voice Receptionist, Lead Generation Agency"
+                keywords="ScaleUp Co, web development company, SEO agency, lead generation agency, CRM automation, AI automation agency, AI chatbot development, digital growth agency, business automation services"
             />
             {/* SEO-visible text for Google indexing — visually hidden from users */}
             <div style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
-                <h1>ScaleUp Co</h1>
-                <p>ScaleUp Co is a digital solutions company helping businesses scale with modern websites, branding, and performance-driven systems.</p>
+                <h1>ScaleUp Co – Growth Systems, Websites & AI Automation</h1>
+                <p>ScaleUp Co helps businesses get found, generate leads, convert customers, and automate growth using websites, SEO, paid advertising, CRM systems, and custom AI systems.</p>
             </div>
             <Hero />
             <Problem />

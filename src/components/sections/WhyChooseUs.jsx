@@ -1,15 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, Target, Zap, Settings, PieChart, MapPin } from 'lucide-react';
+import { TrendingUp, CheckCircle2, Cpu, Layers } from 'lucide-react';
 
 const WhyChooseUs = () => {
     const benefits = [
-        { icon: <Monitor size={20} color="#3b82f6" />, title: "Premium Design Quality", description: "First impressions matter. We out-design your competitors." },
-        { icon: <Target size={20} color="#3b82f6" />, title: "Conversion-Focused", description: "Every pixel is optimized to turn visitors into leads." },
-        { icon: <Zap size={20} color="#3b82f6" />, title: "Lightning Fast Delivery", description: "Launch your new growth system in weeks, not months." },
-        { icon: <Settings size={20} color="#3b82f6" />, title: "Flexible Packages", description: "Pricing that scales with your business growth stage." },
-        { icon: <PieChart size={20} color="#3b82f6" />, title: "Ongoing Support", description: "We monitor, maintain, and improve your site post-launch." },
-        { icon: <MapPin size={20} color="#3b82f6" />, title: "Local Market Expertise", description: "Proven strategies for local business dominance." }
+        { icon: <TrendingUp size={20} color="#3b82f6" />, title: "Growth-Focused", description: "Every service is designed to increase leads, revenue, and business growth." },
+        { icon: <CheckCircle2 size={20} color="#3b82f6" />, title: "Done-For-You Execution", description: "We handle strategy, implementation, optimization, and support." },
+        { icon: <Cpu size={20} color="#3b82f6" />, title: "AI-Powered Systems", description: "Leverage modern automation to reduce costs and save time." },
+        { icon: <Layers size={20} color="#3b82f6" />, title: "One Partner, Multiple Solutions", description: "No need to hire separate agencies for websites, SEO, ads, content, CRM, and AI." }
     ];
 
     const metrics = [
@@ -30,11 +28,11 @@ const WhyChooseUs = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-                            Why Choose <span className="text-gradient">ScaleUp Co</span>?
+                            Why Businesses Choose <span className="text-gradient">ScaleUp Co</span>
                         </h2>
                         <p className="text-lg text-[#94a3b8] mb-8 leading-relaxed max-w-lg">
-                            We separate ourselves from traditional agencies by focusing on what actually matters: <span className="font-bold text-white">Revenue</span>.
-                            No vanity metrics, no confusing jargon. Just premium assets that grow your bottom line.
+                            We help businesses scale by deploying integrated growth and AI automation systems. 
+                            Instead of managing multiple vendor relations, we serve as your single partner for websites, SEO, marketing, and operations.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

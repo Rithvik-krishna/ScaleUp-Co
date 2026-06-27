@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const Process = () => {
     const steps = [
-        { number: "01", title: "Discovery", description: "We understand your business goals, audience, and growth opportunities." },
-        { number: "02", title: "Strategy", description: "We design a conversion-focused website structure tailored to your niche." },
-        { number: "03", title: "Build", description: "We develop your high-performance growth website using modern tech." },
-        { number: "04", title: "Launch & Scale", description: "SEO optimization and lead systems go live to drive revenue." }
+        { number: "01", title: "Get Found", description: "SEO, Google Visibility, Paid Advertising" },
+        { number: "02", title: "Capture Leads", description: "Landing Pages, Forms, CRM Systems" },
+        { number: "03", title: "Convert Customers", description: "Automation, Follow-Ups, Appointment Booking" },
+        { number: "04", title: "Scale Operations", description: "AI Chatbots, AI Voice Receptionist, Custom AI Agents" }
     ];
 
     return (
@@ -20,7 +20,7 @@ const Process = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white"
                     >
-                        Our Simple <span className="text-gradient">4-Step Process</span>
+                        Our <span className="text-gradient">Growth Framework</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const Process = () => {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-[#94a3b8]"
                     >
-                        We've streamlined the entire process so you can focus on running your business while we build your growth engine.
+                        Our systematic approach is built from the ground up to attract traffic, capture leads, convert customers, and scale your daily operations.
                     </motion.p>
                 </div>
 

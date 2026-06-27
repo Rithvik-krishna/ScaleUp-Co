@@ -152,10 +152,10 @@ const ServicesOverview = ({ showViewAll = true }) => {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                     <div className="max-w-2xl">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-                            Our <span className="text-gradient">Growth Systems</span>
+                            Everything You Need <span className="text-gradient">To Grow Your Business</span>
                         </h2>
-                        <p className="text-lg text-[#94a3b8]">
-                            We don't just build websites. We build complete digital ecosystems designed to attract, capture, and convert at scale.
+                        <p className="text-lg text-[#94a3b8] leading-relaxed">
+                            From websites and SEO to lead generation, CRM automation, AI chatbots, and custom AI agents, we build complete systems that help businesses attract, convert, and retain customers.
                         </p>
                     </div>
                     {showViewAll && (
