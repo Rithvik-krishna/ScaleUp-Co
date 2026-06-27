@@ -31,6 +31,9 @@ import LeadGeneration from './pages/services/LeadGeneration';
 import AIChatbots from './pages/services/AIChatbots';
 import AIVoiceReceptionist from './pages/services/AIVoiceReceptionist';
 import BusinessAutomation from './pages/services/BusinessAutomation';
+import SocialMedia from './pages/services/SocialMedia';
+import CRMSalesAutomation from './pages/services/CRMSalesAutomation';
+import BusinessProcessAutomation from './pages/services/BusinessProcessAutomation';
 
 function App() {
   return (
@@ -45,6 +48,9 @@ function App() {
               <Route path="/services/web-development" element={<WebDevelopment />} />
               <Route path="/services/seo" element={<SEOPage />} />
               <Route path="/services/lead-generation" element={<LeadGeneration />} />
+              <Route path="/services/social-media-management" element={<SocialMedia />} />
+              <Route path="/services/crm-sales-automation" element={<CRMSalesAutomation />} />
+              <Route path="/services/business-process-automation" element={<BusinessProcessAutomation />} />
               <Route path="/services/ai-chatbots" element={<AIChatbots />} />
               <Route path="/services/ai-voice-receptionist" element={<AIVoiceReceptionist />} />
               <Route path="/services/business-automation" element={<BusinessAutomation />} />

@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="hidden md:block">
                     <Link to="/contact">
                         <button style={{ background: '#2563eb', borderRadius: '6px' }} className="text-sm font-semibold text-white px-5 py-2.5 hover:bg-[#3b82f6] transition-colors">
-                            Get Started
+                            Discuss Your Project
                         </button>
                     </Link>
                 </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                     <div className="pt-4 mt-2" style={{ borderTop: '1px solid rgba(59,130,246,0.12)' }}>
                         <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                             <button style={{ background: '#2563eb', borderRadius: '6px' }} className="w-full text-sm font-semibold text-white py-3 hover:bg-[#3b82f6] transition-colors">
-                                Get Started
+                                Discuss Your Project
                             </button>
                         </Link>
                     </div>

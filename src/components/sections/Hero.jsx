@@ -54,8 +54,9 @@ const StatCard = ({ icon, stat, label, badge, badgeColor, delay, floatDelay }) =
 /* ---------- Ticker ---------- */
 const tickerItems = [
     'Website Development', 'Google Visibility', 'Lead Generation Systems',
-    'Social Media Marketing', 'Video Editing & Content Creation', 'Paid Advertising',
-    'AI Chatbots', 'AI Voice Receptionist', 'Custom AI Agents'
+    'Social Media Management & Growth', 'Video Editing & Content Creation', 'Paid Advertising',
+    'CRM & Sales Automation', 'Business Process Automation', 'AI Chatbots',
+    'AI Voice Receptionist', 'Custom AI Agents'
 ];
 
 const Ticker = () => {

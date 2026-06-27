@@ -31,10 +31,11 @@ const TermsAndConditions = () => {
                         <li>Website Development</li>
                         <li>SEO & Google Visibility</li>
                         <li>Lead Generation Systems</li>
-                        <li>Social Media Marketing</li>
-                        <li>Video Editing</li>
+                        <li>Social Media Management & Growth</li>
+                        <li>Video Editing & Content Creation</li>
                         <li>Paid Advertising</li>
-                        <li>AI Automation Solutions</li>
+                        <li>CRM & Sales Automation</li>
+                        <li>Business Process Automation</li>
                         <li>AI Chatbots</li>
                         <li>AI Voice Receptionists</li>
                         <li>Custom AI Agents</li>

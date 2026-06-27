@@ -36,7 +36,7 @@ const Pricing = () => {
                 "Google Visibility Optimization",
                 "Lead Generation System",
                 "WhatsApp Integration",
-                "Social Media Marketing Setup",
+                "Social Media Management & Growth Setup",
                 "Video Content Creation",
                 "Conversion-Focused Landing Pages",
                 "Monthly Growth Consultation"

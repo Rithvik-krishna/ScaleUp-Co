@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Mail, Phone, CalendarCheck, ShieldCheck, Clock } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Mail, Phone, CalendarCheck, ShieldCheck, Clock, ChevronDown } from 'lucide-react';
 import SEO from '../components/seo/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 
@@ -61,65 +60,107 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="bg-dark-surface border border-gray-800 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <h3 className="text-2xl font-bold mb-6 relative z-10">Send a Message</h3>
-
-                    <div className="flex flex-col sm:flex-row gap-4 mb-8 relative z-10 hidden lg:flex">
-                        <div className="flex items-start space-x-3 bg-dark-bg/50 border border-gray-800 rounded-xl p-3 flex-1">
-                            <CalendarCheck className="w-5 h-5 text-[#00E1FF] shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-gray-200">Free Strategy Call</p>
-                                <p className="text-xs text-gray-500">30 Minutes</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-3 bg-dark-bg/50 border border-gray-800 rounded-xl p-3 flex-1">
-                            <ShieldCheck className="w-5 h-5 text-[#00E1FF] shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-gray-200">No Commitment</p>
-                                <p className="text-xs text-gray-500">Actionable insights</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-3 bg-dark-bg/50 border border-gray-800 rounded-xl p-3 flex-1">
-                            <Clock className="w-5 h-5 text-[#00E1FF] shrink-0 mt-0.5" />
-                            <div>
-                                <p className="text-sm font-bold text-gray-200">Avg. Response</p>
-                                <p className="text-xs text-gray-500">Under 12 Hours</p>
-                            </div>
-                        </div>
+                <div className="bg-[#060810] border border-gray-800 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div className="mb-8 relative z-10">
+                        <span className="text-xs font-extrabold uppercase tracking-widest text-[#eab308] block mb-2">GET IN TOUCH</span>
+                        <h2 className="text-4xl font-extrabold text-white mb-3 tracking-tight">Let's Talk</h2>
+                        <p className="text-sm text-gray-400 leading-relaxed">
+                            Start a discussion about your brand's growth. We'd love to hear from you.
+                        </p>
                     </div>
 
                     <form className="space-y-6 relative z-10" action="https://formsubmit.co/scaleupco.contact@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New Submission from ScaleUp Co Website" />
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-gray-400">First Name</label>
-                                <input type="text" name="First Name" required className="w-full bg-dark-bg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E1FF] transition-colors" placeholder="John" />
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                                FIRST NAME <span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                name="First Name" 
+                                required 
+                                className="w-full bg-[#0b0f1c] border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-[#eab308] transition-colors" 
+                                placeholder="Name" 
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                                EMAIL <span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                required 
+                                className="w-full bg-[#0b0f1c] border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-[#eab308] transition-colors" 
+                                placeholder="Email" 
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                                PHONE <span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                name="Phone" 
+                                required 
+                                className="w-full bg-[#0b0f1c] border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-[#eab308] transition-colors" 
+                                placeholder="Mobile" 
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                                COMPANY <span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                name="Company" 
+                                required 
+                                className="w-full bg-[#0b0f1c] border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-[#eab308] transition-colors" 
+                                placeholder="Company Name" 
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">
+                                SELECT A SERVICE <span className="text-red-500">*</span>
+                            </label>
+                            <div className="relative">
+                                <select 
+                                    name="Service" 
+                                    required 
+                                    className="w-full bg-[#0b0f1c] border border-gray-800 rounded-xl px-4 py-3.5 text-gray-300 focus:outline-none focus:border-[#eab308] appearance-none transition-colors"
+                                    defaultValue=""
+                                >
+                                    <option value="" disabled>Select A Service</option>
+                                    <option value="Website Development">Website Development</option>
+                                    <option value="Google Visibility">Google Visibility</option>
+                                    <option value="Lead Generation Systems">Lead Generation Systems</option>
+                                    <option value="Social Media Management & Growth">Social Media Management & Growth</option>
+                                    <option value="Video Editing & Content Creation">Video Editing & Content Creation</option>
+                                    <option value="Paid Advertising">Paid Advertising</option>
+                                    <option value="CRM & Sales Automation">CRM & Sales Automation</option>
+                                    <option value="Business Process Automation">Business Process Automation</option>
+                                    <option value="AI Chatbots">AI Chatbots</option>
+                                    <option value="AI Voice Receptionist">AI Voice Receptionist</option>
+                                    <option value="Custom AI Agents">Custom AI Agents</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400">
+                                    <ChevronDown size={18} />
+                                </div>
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-gray-400">Last Name</label>
-                                <input type="text" name="Last Name" required className="w-full bg-dark-bg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E1FF] transition-colors" placeholder="Doe" />
-                            </div>
                         </div>
 
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-400">Email Address</label>
-                            <input type="email" name="email" required className="w-full bg-dark-bg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E1FF] transition-colors" placeholder="john@example.com" />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-400">Business Name</label>
-                            <input type="text" name="Business Name" className="w-full bg-dark-bg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E1FF] transition-colors" placeholder="John's Plumbing" />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-400">How can we help?</label>
-                            <textarea name="message" required className="w-full bg-dark-bg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E1FF] transition-colors min-h-[120px]" placeholder="Tell us about your goals..."></textarea>
-                        </div>
-
-                        <Button type="submit" variant="primary" size="lg" className="w-full">
-                            Send Message
-                        </Button>
+                        <button 
+                            type="submit" 
+                            className="w-full h-14 rounded-xl px-8 text-base font-bold transition-all hover:scale-[1.02] flex items-center justify-center"
+                            style={{ background: '#eab308', color: '#060810' }}
+                        >
+                            Contact Us
+                        </button>
                     </form>
                 </div>
             </div>

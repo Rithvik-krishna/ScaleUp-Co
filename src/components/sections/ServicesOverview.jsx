@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Laptop, Search, MessageSquarePlus, ArrowRight, Share2, Video, Megaphone, Bot, PhoneCall, Cpu } from 'lucide-react';
+import { Laptop, Search, MessageSquarePlus, ArrowRight, Share2, Video, Megaphone, Bot, PhoneCall, Cpu, Database, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service, index }) => {
@@ -88,10 +88,10 @@ const ServicesOverview = ({ showViewAll = true }) => {
         },
         {
             icon: <Share2 className="w-10 h-10 text-[#3b82f6]" />,
-            title: "Social Media Marketing",
-            description: "Grow your brand presence and generate inbound leads through strategic social media management and content marketing.",
-            features: ["Content Strategy", "Instagram Growth", "LinkedIn Marketing"],
-            link: "/services"
+            title: "Social Media Management & Growth",
+            description: "Comprehensive social media management including content strategy, monthly content calendars, content creation, reel production, account management, and lead generation systems that turn followers into customers.",
+            features: ["Content Calendars", "Reels & Creatives", "Lead Generation"],
+            link: "/services/social-media-management"
         },
         {
             icon: <Video className="w-10 h-10 text-[#3b82f6]" />,
@@ -106,6 +106,20 @@ const ServicesOverview = ({ showViewAll = true }) => {
             description: "Drive targeted traffic and qualified leads through data-driven advertising campaigns across major digital platforms.",
             features: ["Meta Ads", "Google Ads", "Retargeting"],
             link: "/services"
+        },
+        {
+            icon: <Database className="w-10 h-10 text-[#3b82f6]" />,
+            title: "CRM & Sales Automation",
+            description: "Streamline your sales process with CRM setup, automated follow-ups, lead tracking, and pipeline management that helps convert more leads into customers.",
+            features: ["CRM Setup", "Follow-Up Automation", "Sales Pipeline"],
+            link: "/services/crm-sales-automation"
+        },
+        {
+            icon: <Workflow className="w-10 h-10 text-[#3b82f6]" />,
+            title: "Business Process Automation",
+            description: "Automate repetitive business tasks using AI and workflow automation to save time, reduce manual work, and improve operational efficiency.",
+            features: ["Workflow Automation", "Integrations", "Operations"],
+            link: "/services/business-process-automation"
         },
         {
             icon: <Bot className="w-10 h-10 text-[#3b82f6]" />,
