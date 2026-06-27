@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,17 +27,17 @@ const Navbar = () => {
     ];
 
     const servicesDropdownItems = [
-        { name: "Website Development", path: "/services/web-development", desc: "Custom, high-performing websites" },
-        { name: "Google Visibility", path: "/services/seo", desc: "Local SEO & GBP optimization" },
-        { name: "Lead Generation Systems", path: "/services/lead-generation", desc: "Convert visitors into bookings" },
-        { name: "Social Media Management & Growth", path: "/services/social-media-management", desc: "Reels, calendars & organic growth" },
-        { name: "Video Editing & Content Creation", path: "/services", desc: "Engagement-focused short-form video" },
-        { name: "Paid Advertising", path: "/services", desc: "Targeted Meta & Google ads" },
-        { name: "CRM & Sales Automation", path: "/services/crm-sales-automation", desc: "Lead pipeline & auto follow-ups" },
-        { name: "Business Process Automation", path: "/services/business-process-automation", desc: "Repetitive workflow automation" },
-        { name: "AI Chatbots", path: "/services/ai-chatbots", desc: "24/7 client engagement systems" },
-        { name: "AI Voice Receptionist", path: "/services/ai-voice-receptionist", desc: "Auto call answering & bookings" },
-        { name: "Custom AI Agents", path: "/services/business-automation", desc: "Cognitive automation systems" }
+        { name: "Website Development", path: "/services/web-development" },
+        { name: "Google Visibility", path: "/services/seo" },
+        { name: "Lead Generation Systems", path: "/services/lead-generation" },
+        { name: "Social Media Management & Growth", path: "/services/social-media-management" },
+        { name: "Video Editing & Content Creation", path: "/services" },
+        { name: "Paid Advertising", path: "/services" },
+        { name: "CRM & Sales Automation", path: "/services/crm-sales-automation" },
+        { name: "Business Process Automation", path: "/services/business-process-automation" },
+        { name: "AI Chatbots", path: "/services/ai-chatbots" },
+        { name: "AI Voice Receptionist", path: "/services/ai-voice-receptionist" },
+        { name: "Custom AI Agents", path: "/services/business-automation" }
     ];
 
     return (
@@ -69,24 +70,33 @@ const Navbar = () => {
                                     </NavLink>
 
                                     {/* Dropdown Panel */}
-                                    {isServicesHovered && (
-                                        <div 
-                                            style={{ background: 'rgba(6,8,16,0.98)', border: '1px solid rgba(59,130,246,0.15)', backdropFilter: 'blur(16px)' }}
-                                            className="absolute top-full left-1/2 transform -translate-x-1/2 w-[580px] rounded-2xl p-6 shadow-2xl z-50 grid grid-cols-2 gap-x-6 gap-y-3 mt-2"
-                                        >
-                                            {servicesDropdownItems.map((item, index) => (
-                                                <Link 
-                                                    key={index} 
-                                                    to={item.path}
-                                                    onClick={() => setIsServicesHovered(false)}
-                                                    className="p-3 hover:bg-white/5 rounded-xl transition-colors group block"
-                                                >
-                                                    <span className="text-sm font-semibold text-gray-200 group-hover:text-blue-500 transition-colors block mb-0.5">{item.name}</span>
-                                                    <span className="text-[11px] text-gray-500 block leading-tight">{item.desc}</span>
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    )}
+                                    <AnimatePresence>
+                                        {isServicesHovered && (
+                                            <motion.div 
+                                                initial={{ opacity: 0, y: 10, x: '-50%' }}
+                                                animate={{ opacity: 1, y: 0, x: '-50%' }}
+                                                exit={{ opacity: 0, y: 10, x: '-50%' }}
+                                                transition={{ duration: 0.2, ease: 'easeOut' }}
+                                                style={{ 
+                                                    background: '#ffffff', 
+                                                    borderTop: '4px solid #1e1b4b',
+                                                    boxShadow: '0 10px 40px rgba(0,0,0,0.12)'
+                                                }}
+                                                className="absolute top-full left-1/2 transform w-80 rounded-b-2xl p-4 z-50 flex flex-col space-y-1 mt-2"
+                                            >
+                                                {servicesDropdownItems.map((item, index) => (
+                                                    <Link 
+                                                        key={index} 
+                                                        to={item.path}
+                                                        onClick={() => setIsServicesHovered(false)}
+                                                        className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#1e1b4b] hover:bg-[#1e1b4b]/5 transition-colors block text-left"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
                             );
                         }
