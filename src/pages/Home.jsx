@@ -10,7 +10,7 @@ import DetailedSEOContent from '../components/sections/DetailedSEOContent';
 import Pricing from '../components/sections/Pricing';
 import Trust from '../components/sections/Trust';
 import FAQ from '../components/sections/FAQ';
-import FinalCTA from '../components/sections/FinalCTA';
+import DiscussProject from '../components/sections/DiscussProject';
 
 const Home = () => {
     useEffect(() => {
@@ -40,7 +40,7 @@ const Home = () => {
             <Pricing />
             <Trust />
             <FAQ />
-            <FinalCTA />
+            <DiscussProject />
         </div>
     );
 };
