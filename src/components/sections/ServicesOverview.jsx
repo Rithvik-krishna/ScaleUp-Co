@@ -144,6 +144,8 @@ const ServicesOverview = ({ showViewAll = true }) => {
         }
     ];
 
+    const displayedServices = showViewAll ? services.slice(0, 3) : services;
+
     return (
         <section style={{ background: '#060810', padding: '7rem 0' }}>
             <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10">
@@ -164,7 +166,7 @@ const ServicesOverview = ({ showViewAll = true }) => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
+                    {displayedServices.map((service, index) => (
                         <ServiceCard key={index} service={service} index={index} />
                     ))}
                 </div>
