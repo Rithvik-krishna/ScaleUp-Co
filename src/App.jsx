@@ -10,7 +10,6 @@ import WhatsAppButton from './components/ui/WhatsAppButton';
 // Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -55,7 +54,6 @@ function App() {
               <Route path="/services/ai-voice-receptionist" element={<AIVoiceReceptionist />} />
               <Route path="/services/business-automation" element={<BusinessAutomation />} />
               
-              <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/portfolio" element={<Portfolio />} />

@@ -7,7 +7,6 @@ import Portfolio from '../components/sections/Portfolio';
 import Process from '../components/sections/Process';
 import WhyChooseUs from '../components/sections/WhyChooseUs';
 import DetailedSEOContent from '../components/sections/DetailedSEOContent';
-import Pricing from '../components/sections/Pricing';
 import Trust from '../components/sections/Trust';
 import FAQ from '../components/sections/FAQ';
 import DiscussProject from '../components/sections/DiscussProject';
@@ -37,7 +36,6 @@ const Home = () => {
             <Process />
             <WhyChooseUs />
             <DetailedSEOContent />
-            <Pricing />
             <Trust />
             <FAQ />
             <DiscussProject />
