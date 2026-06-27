@@ -78,9 +78,12 @@ const Navbar = () => {
                                                 exit={{ opacity: 0, y: 10, x: '-50%' }}
                                                 transition={{ duration: 0.2, ease: 'easeOut' }}
                                                 style={{ 
-                                                    background: '#ffffff', 
-                                                    borderTop: '4px solid #1e1b4b',
-                                                    boxShadow: '0 10px 40px rgba(0,0,0,0.12)'
+                                                    background: '#060810', 
+                                                    borderTop: '4px solid #2563eb',
+                                                    borderLeft: '1px solid rgba(59,130,246,0.12)',
+                                                    borderRight: '1px solid rgba(59,130,246,0.12)',
+                                                    borderBottom: '1px solid rgba(59,130,246,0.12)',
+                                                    boxShadow: '0 10px 40px rgba(0,0,0,0.5)'
                                                 }}
                                                 className="absolute top-full left-1/2 transform w-80 rounded-b-2xl p-4 z-50 flex flex-col space-y-1 mt-2"
                                             >
@@ -89,7 +92,7 @@ const Navbar = () => {
                                                         key={index} 
                                                         to={item.path}
                                                         onClick={() => setIsServicesHovered(false)}
-                                                        className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#1e1b4b] hover:bg-[#1e1b4b]/5 transition-colors block text-left"
+                                                        className="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 transition-colors block text-left"
                                                     >
                                                         {item.name}
                                                     </Link>
