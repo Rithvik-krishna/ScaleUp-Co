@@ -142,12 +142,6 @@ const Hero = () => {
                                         </svg>
                                         <span className="text-gray-800 font-bold text-xs tracking-tight">Meta <span className="font-normal text-gray-500">Business Partners</span></span>
                                     </div>
-
-                                    {/* Klaviyo Partner */}
-                                    <div className="bg-white/95 border border-gray-200 shadow-sm px-4 py-2 rounded-lg flex items-center gap-2 h-10 shrink-0 select-none">
-                                        <div className="w-1 h-5 bg-[#FF5A1F] rounded-full"></div>
-                                        <span className="text-gray-800 font-extrabold text-xs tracking-tight">klaviyo <span className="font-normal text-gray-500">PARTNER</span></span>
-                                    </div>
                                 </div>
 
                                 {/* CTA buttons */}
