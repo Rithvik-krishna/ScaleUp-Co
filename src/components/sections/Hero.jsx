@@ -94,17 +94,14 @@ const Hero = () => {
                 {/* Main content */}
                 <div className="flex-1 flex items-center relative z-10 w-full">
                     <div className="max-w-7xl mx-auto px-6 md:px-20 w-full" style={{ paddingTop: '7rem', paddingBottom: '4rem' }}>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="max-w-4xl">
 
-                            {/* LEFT */}
+                            {/* Main Text Content */}
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, ease: 'easeOut' }}
-                                className="max-w-2xl"
                             >
-
-
                                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
                                     ScaleUp Co
                                 </h1>
@@ -116,30 +113,42 @@ const Hero = () => {
                                     We help businesses generate more leads, close more customers, and automate operations through websites, SEO, paid advertising, CRM systems, and AI-powered automation.
                                 </p>
 
-                                {/* Inline metrics strip */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: 0.35 }}
-                                    className="flex mb-10"
-                                    style={{
-                                        background: 'rgba(11,15,28,0.8)',
-                                        border: '1px solid rgba(59,130,246,0.15)',
-                                        borderRadius: '10px',
-                                        maxWidth: '480px',
-                                    }}
-                                >
-                                    {[
-                                        { value: 'Growth', label: 'End-to-end solutions' },
-                                        { value: '11 Core',  label: 'Services offered' },
-                                        { value: 'All-in-One',  label: 'Web, Marketing & AI' },
-                                    ].map((m, i) => (
-                                        <div key={i} className="flex-1 flex flex-col items-center justify-center py-3" style={{ borderRight: i < 2 ? '1px solid rgba(59,130,246,0.12)' : 'none' }}>
-                                            <span style={{ fontSize: '1.4rem', fontWeight: 700, color: 'white', lineHeight: 1.2 }}>{m.value}</span>
-                                            <span style={{ fontSize: '0.7rem', color: '#64748b', marginTop: '2px', textAlign: 'center', lineHeight: 1.3 }}>{m.label}</span>
-                                        </div>
-                                    ))}
-                                </motion.div>
+                                {/* Partners logo badges cloud */}
+                                <div className="flex flex-wrap items-center gap-4 mb-8">
+                                    {/* Google Partner */}
+                                    <div className="bg-white/95 border border-gray-200 shadow-sm px-4 py-2 rounded-lg flex items-center gap-2 h-10 shrink-0 select-none">
+                                        <div className="w-1 h-5 bg-[#4285F4] rounded-full"></div>
+                                        <svg className="w-4 h-4" viewBox="0 0 24 24">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.22-.66-.35-1.36-.35-2.09z" fill="#FBBC05"/>
+                                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                        </svg>
+                                        <span className="text-gray-800 font-extrabold text-xs tracking-tight">Partner</span>
+                                    </div>
+
+                                    {/* Shopify Partner */}
+                                    <div className="bg-white/95 border border-gray-200 shadow-sm px-4 py-2 rounded-lg flex items-center gap-2 h-10 shrink-0 select-none">
+                                        <svg className="w-5 h-5 text-[#95BF47] fill-current" viewBox="0 0 24 24">
+                                            <path d="M19.5 7.5L18 4.5H12V3c0-.83-.67-1.5-1.5-1.5h-3C6.67 1.5 6 2.17 6 3v1.5H0L1.5 22.5h18l1.5-15zM7.5 3c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v1.5h-4V3zm7.88 12.87c-.8 1.4-2.18 2.25-3.88 2.25-2.5 0-4.5-1.79-4.5-4s2-4 4.5-4c1.69 0 3.06.85 3.86 2.25l-1.37.69c-.5-.87-1.37-1.44-2.49-1.44-1.38 0-2.5.89-2.5 2.5s1.12 2.5 2.5 2.5c1.13 0 2-.57 2.5-1.44l1.38.69z"/>
+                                        </svg>
+                                        <span className="text-gray-800 font-bold text-xs tracking-tight">shopify <span className="font-normal text-gray-500">partners</span></span>
+                                    </div>
+
+                                    {/* Meta Partner */}
+                                    <div className="bg-white/95 border border-gray-200 shadow-sm px-4 py-2 rounded-lg flex items-center gap-2 h-10 shrink-0 select-none">
+                                        <svg className="w-5 h-5 text-[#0064E0] fill-current" viewBox="0 0 24 24">
+                                            <path d="M16.14 7c-1.39 0-2.6.53-3.5 1.4-.73-.72-1.68-1.2-2.78-1.32-.23-.02-.45-.03-.68-.03a5.55 5.55 0 000 11.1c.23 0 .45-.01.68-.03 1.1-.12 2.05-.6 2.78-1.32.9.87 2.11 1.4 3.5 1.4 2.87 0 5.2-2.31 5.2-5.2S19.01 7 16.14 7zm0 8.4c-1.76 0-3.2-1.44-3.2-3.2s1.44-3.2 3.2-3.2 3.2 1.44 3.2 3.2-1.44 3.2-3.2 3.2z"/>
+                                        </svg>
+                                        <span className="text-gray-800 font-bold text-xs tracking-tight">Meta <span className="font-normal text-gray-500">Business Partners</span></span>
+                                    </div>
+
+                                    {/* Klaviyo Partner */}
+                                    <div className="bg-white/95 border border-gray-200 shadow-sm px-4 py-2 rounded-lg flex items-center gap-2 h-10 shrink-0 select-none">
+                                        <div className="w-1 h-5 bg-[#FF5A1F] rounded-full"></div>
+                                        <span className="text-gray-800 font-extrabold text-xs tracking-tight">klaviyo <span className="font-normal text-gray-500">PARTNER</span></span>
+                                    </div>
+                                </div>
 
                                 {/* CTA buttons */}
                                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -155,31 +164,7 @@ const Hero = () => {
                                         </button>
                                     </Link>
                                 </div>
-
-                                {/* Industry tags */}
-                                <div className="mt-12">
-                                    <p className="text-sm text-[#64748b] mb-4 font-medium uppercase tracking-wider">Helping businesses in:</p>
-                                    <div className="flex flex-wrap gap-3">
-                                        {['Restaurants', 'Clinics', 'Gyms', 'Real Estate', 'Salons', 'Local Retail', 'Startups', 'E-Commerce', 'Professional Services', 'Education', 'Construction', 'Home Services'].map((industry) => (
-                                            <span key={industry} style={{ background: 'rgba(11,15,28,0.8)', border: '1px solid rgba(59,130,246,0.15)', borderRadius: '99px' }} className="text-xs font-semibold text-[#94a3b8] px-3 py-1.5">
-                                                {industry}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
                             </motion.div>
-
-                            {/* RIGHT — divider + stat cards + live activity */}
-                            <div className="hidden lg:flex items-stretch gap-8">
-                                {/* Vertical divider */}
-                                <div className="self-stretch w-px" style={{ background: 'rgba(59,130,246,0.2)', minHeight: '320px' }}></div>
-
-                                <div className="flex flex-col gap-4 max-w-sm flex-1">
-                                    <StatCard icon={<TrendingUp className="w-6 h-6 text-[#3b82f6]" />} stat="Growth" label="End-to-End Solutions" badge="Integrated" badgeColor="rgba(34,197,94,0.8)" delay={0.3} floatDelay="0s" />
-                                    <StatCard icon={<Globe className="w-6 h-6 text-[#3b82f6]" />} stat="11 Core" label="Services Offered" badge="AI & Web" badgeColor="rgba(37,99,235,0.85)" delay={0.45} floatDelay="0.5s" />
-                                    <StatCard icon={<Star className="w-6 h-6 text-[#3b82f6]" />} stat="All-in-One" label="Web, Marketing & AI" badge="One Roof" badgeColor="rgba(100,116,139,0.85)" delay={0.6} floatDelay="1s" />
-                                </div>
-                            </div>
 
                         </div>
                     </div>
